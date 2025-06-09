@@ -5,15 +5,8 @@ public class Temp_PlayerController : MonoBehaviour
 {
     [Header("이동 설정")]
     [SerializeField] private float moveSpeed = 5.0f; // 플레이어 이동 속도
-    [SerializeField] private float rotationSpeed = 100.0f; // 플레이어 회전 속도 (카메라 기준)
     [SerializeField] private float gravity = -9.81f; // 중력
     [SerializeField] private CharacterController characterController; // CharacterController 컴포넌트
-
-    [Header("카메라 설정")]
-    [SerializeField] private Transform cameraTransform; // 메인 카메라의 Transform
-    [SerializeField] private float mouseSensitivity = 2.0f; // 마우스 감도
-    [SerializeField] private float upperLimit = 80f; // 위쪽 회전 제한 (도)
-    [SerializeField] private float lowerLimit = -80f; // 아래쪽 회전 제한 (도)
 
     // Input System 관련 변수
     private PlayerControls playerControls; // 생성한 Input Actions 에셋의 C# 클래스 인스턴스
@@ -21,7 +14,14 @@ public class Temp_PlayerController : MonoBehaviour
     private Vector2 lookInput; // 마우스 회전 입력 값
 
     private Vector3 velocity; // 플레이어의 현재 속도 (중력 적용용)
-    private float cameraPitch = 0f; // 카메라 상하 회전각
+
+    [Header("회전 설정")]
+    [SerializeField] private float rotationSpeed = 10f; // 회전 속도
+
+    [Header("점프 설정")]
+    [SerializeField] private float jumpForce = 5f;
+    [SerializeField] private bool canDoubleJump = false; // 이중 점프 가능 여부
+    private bool hasDoubleJumped = false;
 
     void Awake()
     {
@@ -37,22 +37,6 @@ public class Temp_PlayerController : MonoBehaviour
             }
         }
 
-        // 카메라 Transform 할당 확인 (할당되어 있지 않으면 메인 카메라 찾기)
-        if (cameraTransform == null)
-        {
-            Camera mainCam = Camera.main;
-            if (mainCam != null)
-            {
-                cameraTransform = mainCam.transform;
-            }
-            else
-            {
-                Debug.LogError("Camera Transform이 할당되지 않았고, 'MainCamera' 태그를 가진 카메라를 찾을 수 없습니다. 카메라를 할당해주세요.");
-                enabled = false; // 스크립트 비활성화
-                return;
-            }
-        }
-
         // Input Actions 인스턴스 생성 및 액션 바인딩
         playerControls = new PlayerControls();
 
@@ -60,13 +44,12 @@ public class Temp_PlayerController : MonoBehaviour
         playerControls.Player.Move.performed += ctx => movementInput = ctx.ReadValue<Vector2>();
         playerControls.Player.Move.canceled += ctx => movementInput = Vector2.zero; // 키 떼면 입력 0으로
 
-        // Look 액션 구독 추가
-        playerControls.Player.Look.performed += ctx => lookInput = ctx.ReadValue<Vector2>();
-        playerControls.Player.Look.canceled += ctx => lookInput = Vector2.zero;
+        // Look 액션 구독 (카메라 회전은 별도 스크립트에서 처리될 수 있으나, 여기서는 플레이어 방향만 고려)
+        //playerControls.Player.Look.performed += ctx => lookInput = ctx.ReadValue<Vector2>();
+        //playerControls.Player.Look.canceled += ctx => lookInput = Vector2.zero;
 
-        // 커서 잠금
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        // Jump 액션 구독 추가
+        playerControls.Player.Jump.performed += ctx => OnJump();
     }
 
     void OnEnable()
@@ -83,41 +66,22 @@ public class Temp_PlayerController : MonoBehaviour
 
     void Update()
     {
-        HandleRotation();
-        HandleMovement();
         ApplyGravity();
+        HandleMovement();
     }
 
-    private void HandleRotation()
+    private void OnJump()
     {
-        // 마우스 입력으로 카메라 회전
-        if (lookInput.sqrMagnitude >= 0.01f)
+        if (characterController.isGrounded)
         {
-            // 좌우 회전 (플레이어 전체 회전)
-            float yaw = lookInput.x * mouseSensitivity;
-            transform.Rotate(Vector3.up, yaw);
-
-            // 상하 회전 (카메라만 회전)
-            cameraPitch -= lookInput.y * mouseSensitivity;
-            cameraPitch = Mathf.Clamp(cameraPitch, lowerLimit, upperLimit);
-            cameraTransform.localRotation = Quaternion.Euler(cameraPitch, 0, 0);
+            velocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
+            hasDoubleJumped = false;
         }
-    }
-
-    private void HandleMovement()
-    {
-        Vector3 moveDirection = Vector3.zero;
-        if (movementInput.sqrMagnitude > 0.01f)
+        else if (canDoubleJump && !hasDoubleJumped)
         {
-            // 플레이어의 정면과 오른쪽 방향을 기준으로 이동
-            Vector3 forward = transform.forward;
-            Vector3 right = transform.right;
-
-            moveDirection = (forward * movementInput.y + right * movementInput.x).normalized;
+            velocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
+            hasDoubleJumped = true;
         }
-
-        // 이동 적용
-        characterController.Move(moveDirection * moveSpeed * Time.deltaTime);
     }
 
     private void ApplyGravity()
@@ -125,8 +89,31 @@ public class Temp_PlayerController : MonoBehaviour
         if (characterController.isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
+            hasDoubleJumped = false; // 땅에 닿으면 이중 점프 초기화
         }
         velocity.y += gravity * Time.deltaTime;
         characterController.Move(velocity * Time.deltaTime);
+    }
+
+    private void HandleMovement()
+    {
+        Vector3 moveDirection = Vector3.zero;
+        if (movementInput.sqrMagnitude > 0.01f)
+        {
+            // 카메라 기준으로 이동 방향 계산
+            Vector3 forward = Camera.main.transform.forward;
+            Vector3 right = Camera.main.transform.right;
+            
+            // 수직 방향은 무시
+            forward.y = 0;
+            right.y = 0;
+            forward.Normalize();
+            right.Normalize();
+
+            moveDirection = (forward * movementInput.y + right * movementInput.x).normalized;
+        }
+
+        // 이동만 적용 (회전은 제거)
+        characterController.Move(moveDirection * moveSpeed * Time.deltaTime);
     }
 }
