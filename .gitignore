@@ -105,3 +105,6 @@ crashlytics-build.properties
 # Optional: Ignore FMOD project files if you only want to commit built output
 # (uncomment below if you want to ignore FMOD Studio workspace)
 /FMODProject/ 
+
+# Log files can be ignored.
+fmod_editor.log
