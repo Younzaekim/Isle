@@ -101,7 +101,7 @@ public class PlayerController : MonoBehaviour
 
             if (Input.GetKey(KeyCode.Space))
             {
-                //날고있을때 왼쪽 쉬프트 누르면 상승
+                //날고있을때 스페이스바 누르면 상승
                 rb.linearVelocity = new Vector3(rb.linearVelocity.x, moveSpeed, rb.linearVelocity.z);
             }
             else
