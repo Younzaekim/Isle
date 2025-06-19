@@ -1,3 +1,4 @@
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -6,60 +7,57 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] private float mouseSensitivity = 2f;
     [SerializeField] private float fallSpeed = 0.5f;
-
+    [SerializeField] private float flyingTime = 7f;
+    [SerializeField] private Transform camTarget;
 
     private Rigidbody rb;
     private bool isGrounded = true;
     private bool canFly = true;
     private bool isFlying = false;
 
-    private float xRotation = 0f;
-    private Camera playerCamera;
-
+    private float flyingTimer = 0f;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-
-        //카메라가 플레이어 자식으로 들어가있으므로
-        playerCamera = GetComponentInChildren<Camera>();
-        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()
     {
-        Move();
         Jump();
         FlyHandler();
-        CamControl();
     }
 
-    private void CamControl()
+    private void FixedUpdate()
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
-
-        //카메라 회전시 플레이어도 같이 회전
-        transform.Rotate(Vector3.up * mouseX);
-
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-        if (playerCamera != null)
-        {
-            playerCamera.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        }
-    }
+        Move();        
+    }   
 
     private void Move()
     {
         float moveXInput = Input.GetAxisRaw("Horizontal");
         float moveZInput = Input.GetAxisRaw("Vertical");
 
-        Vector3 move = transform.right * moveXInput + transform.forward * moveZInput;
-        Vector3 velocity = move.normalized * moveSpeed;
+        Vector3 camZDir = camTarget.forward;
+        Vector3 camXDir = camTarget.right;
+
+        camZDir.y = 0f;
+        camXDir.y = 0f;
+
+        camZDir.Normalize();
+        camXDir.Normalize();
+
+        Vector3 moveDir = camZDir * moveZInput + camXDir * moveXInput;
+        Vector3 velocity = moveDir.normalized * moveSpeed;
         velocity.y = rb.linearVelocity.y;
 
         rb.linearVelocity = velocity;
+
+        if (moveDir != Vector3.zero)
+        {
+            Quaternion toRotation = Quaternion.LookRotation(moveDir, Vector3.up);
+            transform.rotation = Quaternion.Slerp(transform.rotation, toRotation, Time.deltaTime * 10f);
+        }
     }
 
     private void Jump()
@@ -84,7 +82,8 @@ public class PlayerController : MonoBehaviour
     private void StartFly()
     {
         isFlying = true;
-        canFly = false;        
+        canFly = false;
+        flyingTimer = 0f;
         rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
         rb.useGravity = false;
     }
@@ -93,15 +92,17 @@ public class PlayerController : MonoBehaviour
     {
         if (isFlying)
         {
-            if (Input.GetKey(KeyCode.LeftShift))
+            flyingTimer += Time.deltaTime;
+            if (flyingTimer >= flyingTime)
             {
-                //날고있을때 왼쪽 쉬프트 누르면 상승
-                rb.linearVelocity = new Vector3(rb.linearVelocity.x, moveSpeed, rb.linearVelocity.z);
+                StopFly();
+                return;
             }
-            else if (Input.GetKey(KeyCode.LeftControl))
+
+            if (Input.GetKey(KeyCode.Space))
             {
-                //왼쪽 컨트롤 누르면 하강
-                rb.linearVelocity = new Vector3(rb.linearVelocity.x, -moveSpeed, rb.linearVelocity.z);
+                //날고있을때 스페이스바 누르면 상승
+                rb.linearVelocity = new Vector3(rb.linearVelocity.x, moveSpeed, rb.linearVelocity.z);
             }
             else
             {
