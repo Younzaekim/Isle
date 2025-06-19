@@ -277,13 +277,14 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.toonshader": {
-      "version": "file:C:/Users/YJ/Desktop/com.unity.toonshader-0.11.0-preview/package",
+      "version": "0.11.1-preview",
       "depth": 0,
-      "source": "local",
+      "source": "registry",
       "dependencies": {
-        "com.unity.film-internal-utilities": "0.19.2-preview",
-        "com.unity.render-pipelines.core": "10.0.0"
-      }
+        "com.unity.render-pipelines.core": "10.0.0",
+        "com.unity.film-internal-utilities": "0.19.2-preview"
+      },
+      "url": "https://packages.unity.com"
     },
     "com.unity.ugui": {
       "version": "2.0.0",
