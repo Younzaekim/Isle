@@ -89,4 +89,19 @@ crashlytics-build.properties
 ..DS_Store
 /.DS_Store
 /._.DS_Store
-/Assets/Resources/ 
+/Assets/Resources/
+
+# Ignore original audio source files
+*.wav
+*.aiff
+*.flac
+*.mp3
+
+# But allow FMOD .bank files to be included (typically under StreamingAssets)
+!*.bank
+!*.strings.bank
+!Assets/StreamingAssets/**
+
+# Optional: Ignore FMOD project files if you only want to commit built output
+# (uncomment below if you want to ignore FMOD Studio workspace)
+/FMODProject/ 
