@@ -11,9 +11,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform camTarget;
 
     private Rigidbody rb;
-    private bool isGrounded = true;
+    public bool isGrounded { get; private set; } = true;
     private bool canFly = true;
-    private bool isFlying = false;
+    public bool isFlying { get; private set; } = false;
 
     private float flyingTimer = 0f;
 
@@ -30,8 +30,8 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Move();        
-    }   
+        Move();
+    }
 
     private void Move()
     {
@@ -119,13 +119,22 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision collision)
-    {        
+    {
         if (collision.gameObject.CompareTag("Ground"))
         {
             //땅에 닿으면 날기 멈춤
             isGrounded = true;
             canFly = true;
             StopFly();
+        }
+    }
+    
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            //땅에서 떨어지면 날 수 있음
+            isGrounded = false;
         }
     }
 }
