@@ -18,7 +18,7 @@ public class PlayerController_Test : MonoBehaviour
     public bool isGrounded { get; private set; } = true;
     private bool canFly = true;
     public bool isFlying { get; private set; } = false;
-
+    public bool isAirborne { get; private set; } = false;
     private float flyingTimer = 0f;
 
     private void Start()
@@ -58,10 +58,41 @@ public class PlayerController_Test : MonoBehaviour
 
         rb.linearVelocity = velocity;
 
-        if (moveDir != Vector3.zero)
+        if (isAirborne)
         {
-            Quaternion toRotation = Quaternion.LookRotation(moveDir, Vector3.up);
-            transform.rotation = Quaternion.Slerp(transform.rotation, toRotation, Time.deltaTime * 10f);
+            if (moveDir != Vector3.zero)
+            {
+                // 비행 중 이동 입력이 있을 때:
+                // y축: 카메라 기준 방향을 천천히 따라감
+                Quaternion targetYRotation = Quaternion.LookRotation(moveDir, Vector3.up);
+                float yRotation = Mathf.LerpAngle(transform.eulerAngles.y, targetYRotation.eulerAngles.y, Time.deltaTime * 1.5f); // 부드럽게 회전
+
+                // z축: 좌우 입력에 따라 빠르게 기울임
+                float targetZRotation = -moveXInput * 20f;
+                float zRotation = Mathf.LerpAngle(transform.eulerAngles.z, targetZRotation, Time.deltaTime * 8f); // 빠르게 기울이기
+
+                // 최종 회전 적용
+                Quaternion finalRotation = Quaternion.Euler(0f, yRotation, zRotation);
+                transform.rotation = finalRotation;
+            }
+            else
+            {
+                // 비행 중 이동 입력이 없을 때:
+                // z축 기울기만 서서히 복구
+                float zRotation = Mathf.LerpAngle(transform.eulerAngles.z, 0f, Time.deltaTime * 5f);
+                Quaternion finalRotation = Quaternion.Euler(0f, transform.eulerAngles.y, zRotation);
+                transform.rotation = finalRotation;
+            }
+        }
+        else
+        {
+            // 지상 이동 중:
+            // y축 방향을 빠르게 카메라 기준으로 따라감
+            if (moveDir != Vector3.zero)
+            {
+                Quaternion toRotation = Quaternion.LookRotation(moveDir, Vector3.up);
+                transform.rotation = Quaternion.Slerp(transform.rotation, toRotation, Time.deltaTime * 10f);
+            }
         }
     }
 
@@ -84,11 +115,16 @@ public class PlayerController_Test : MonoBehaviour
         }
     }
 
+    [SerializeField] private float flyForce = 50f; // 시작 힘
+    [SerializeField] private float minFlyForce = 5f; // 최소 힘 (유지되는 힘)
+
     private void StartFly()
     {
         isFlying = true;
         canFly = false;
+        isAirborne = true;
         flyingTimer = 0f;
+
         rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
         rb.useGravity = false;
     }
@@ -98,24 +134,32 @@ public class PlayerController_Test : MonoBehaviour
         if (isFlying)
         {
             flyingTimer += Time.deltaTime;
+
             if (flyingTimer >= flyingTime)
             {
                 StopFly();
                 return;
             }
 
+            // 시간에 따라 힘 감소 (선형 감속)
+            float t = flyingTimer / flyingTime; // 진행 비율 (0 ~ 1)
+            float currentForce = Mathf.Lerp(flyForce, minFlyForce, t); // 힘이 점점 줄어듦
+
+            Vector3 flyDirection = transform.forward;
+            rb.AddForce(flyDirection * currentForce, ForceMode.Force); // 지속 감속 추진
+
             if (Input.GetKey(KeyCode.Space))
             {
-                //날고있을때 스페이스바 누르면 상승
                 rb.linearVelocity = new Vector3(rb.linearVelocity.x, moveSpeed, rb.linearVelocity.z);
             }
             else
             {
-                //아무것도 누르지 않으면 천천히 하강(활공하는 느낌)
                 rb.linearVelocity = new Vector3(rb.linearVelocity.x, -fallSpeed, rb.linearVelocity.z);
             }
         }
     }
+
+
 
     private void StopFly()
     {
@@ -133,6 +177,7 @@ public class PlayerController_Test : MonoBehaviour
             // 땅에 닿아있는 경우
             isGrounded = true;
             canFly = true;
+            isAirborne = false;
             StopFly();
         }
         else
