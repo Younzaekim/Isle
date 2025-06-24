@@ -13,11 +13,11 @@ public class RespawnController : MonoBehaviour
 
     public List<ZoneRespawnPoint> respawnPoints = new List<ZoneRespawnPoint>(); // 리스폰 존 정보 리스트
 
-    Dictionary<string, Transform> respawnDictionary = new Dictionary<string, Transform>(); // 존 태그와 리스폰 위치를 빠르게 찾기 위한 딕셔너리
+    private Dictionary<string, Transform> respawnDictionary = new Dictionary<string, Transform>(); // 존 태그와 리스폰 위치를 빠르게 찾기 위한 딕셔너리
 
-    public string currentZone = null;  // 현재 플레이어가 밟고 있는 존 태그
-    Transform lastRespawnPoint;        // 마지막으로 성공적으로 밟은 리스폰 포인트
-    float fallThreshold = -8f;        // 낙사 판정 y 좌표 기준
+    public string currentZone = null;   // 현재 플레이어가 밟고 있는 존 태그
+    private Transform lastRespawnPoint; // 마지막으로 성공적으로 밟은 리스폰 포인트
+    private float fallThreshold = -8f;  // 낙사 판정 y 좌표 기준
 
     void Start()
     {
