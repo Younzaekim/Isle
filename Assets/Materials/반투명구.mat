@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: "\uBC18\uD22C\uBA85\uAD6C"
-  m_Shader: {fileID: -6465566751694194690, guid: ab91af2db61eb2c418afa0dee4fc7a8e, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 0904be33cd1e9b346843c389e9644510, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -117,7 +117,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1.9622642, g: 1.6292295, b: 0.74973303, a: 0.3882353}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
