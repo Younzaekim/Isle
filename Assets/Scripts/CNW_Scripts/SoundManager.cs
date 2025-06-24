@@ -19,9 +19,9 @@ public class SoundManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        LoadBanks();
+        LoadBanks(); // 모든 사운드가 담긴 Bank파일을 로드
     }
-
+    
     private void LoadBanks()
     {
         foreach (var bank in banksToLoad)

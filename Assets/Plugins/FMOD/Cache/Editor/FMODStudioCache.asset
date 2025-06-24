@@ -1,5 +1,34 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9158789412184354503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/JumpStart/SurfaceType
+  m_EditorClassIdentifier: 
+  Name: SurfaceType
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 3946101226
+    data2: 989226476
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Leave
+  - Rock
+  - Sand
+  - Water
+  - Wood
+  Exists: 1
 --- !u!114 &-7478156362705536945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,7 +98,7 @@ MonoBehaviour:
   Path: Assets/Resources/CNW_Resources/FMOD/Bank/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638858551907360991
+  lastModified: 638863700985212561
   FileSizes: []
   Exists: 1
 --- !u!114 &-4401344399455072920
@@ -153,6 +182,61 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 734
+--- !u!114 &-992443586298827364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Footstep/Wood/Jump_Land2D
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Footstep/Wood/Jump_Land2D
+  Guid:
+    Data1: 1881723751
+    Data2: 1099427189
+    Data3: 1247235213
+    Data4: 244308686
+  Banks:
+  - {fileID: -5145772718758297144}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 536
+--- !u!114 &-875356175170410882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Footstep/JumpLand
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Footstep/JumpLand
+  Guid:
+    Data1: -475764904
+    Data2: 1249533407
+    Data3: -436727160
+    Data4: 1277431625
+  Banks:
+  - {fileID: -5145772718758297144}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 6433569317672972309}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1270
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,6 +253,7 @@ MonoBehaviour:
   - {fileID: 5892233939858152429}
   - {fileID: 507899739898414951}
   - {fileID: -5145772718758297144}
+  - {fileID: 9184057755754722061}
   EditorEvents:
   - {fileID: 1645901388525884224}
   - {fileID: 8933511346948805318}
@@ -187,13 +272,22 @@ MonoBehaviour:
   - {fileID: -4401344399455072920}
   - {fileID: 7847156940103850116}
   - {fileID: 4648786464604607619}
+  - {fileID: 8250194696055438495}
+  - {fileID: 3810729351546588808}
+  - {fileID: 291939017379231530}
+  - {fileID: 6116756060286374189}
+  - {fileID: -875356175170410882}
+  - {fileID: -992443586298827364}
+  - {fileID: 660553697665749869}
+  - {fileID: 4862666144426776633}
+  - {fileID: 9020134224503356698}
   EditorParameters: []
   MasterBanks:
   - {fileID: 507899739898414951}
   StringsBanks:
   - {fileID: 5892233939858152429}
   cacheVersion: 131847
-  cacheTime: 638858551907360991
+  cacheTime: 638863700985212561
   SerializableEventsDict:
   - key: event:/SFX/Player/Footstep/Sand/Jump_Land2D
     index: 0
@@ -229,6 +323,51 @@ MonoBehaviour:
     index: 15
   - key: event:/SFX/Player/Footstep/Water/Jump_Land2D
     index: 16
+  - key: event:/Stage1
+    index: 17
+  - key: event:/Stage1Ev
+    index: 18
+  - key: event:/SFX/Player/Footstep/Wood/Jump_Start2D
+    index: 19
+  - key: event:/SFX/Player/Footstep/Flying
+    index: 20
+  - key: event:/SFX/Player/Footstep/JumpLand
+    index: 21
+  - key: event:/SFX/Player/Footstep/Wood/Jump_Land2D
+    index: 22
+  - key: event:/SFX/Player/Footstep/Wood/Walk2D
+    index: 23
+  - key: event:/SFX/Player/Footstep/Wood/Walk3D
+    index: 24
+  - key: event:/SFX/Player/Footstep/JumpStart
+    index: 25
+--- !u!114 &291939017379231530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Footstep/Wood/Jump_Start2D
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Footstep/Wood/Jump_Start2D
+  Guid:
+    Data1: 1658034443
+    Data2: 1176657642
+    Data3: 1764865672
+    Data4: -1693173251
+  Banks:
+  - {fileID: -5145772718758297144}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 357
 --- !u!114 &507899739898414951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,9 +383,36 @@ MonoBehaviour:
   Path: Assets/Resources/CNW_Resources/FMOD/Bank/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638858551906907463
+  lastModified: 638863700984877280
   FileSizes: []
   Exists: 1
+--- !u!114 &660553697665749869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Footstep/Wood/Walk2D
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Footstep/Wood/Walk2D
+  Guid:
+    Data1: 1075719039
+    Data2: 1313811349
+    Data3: -1722355030
+    Data4: 1444811246
+  Banks:
+  - {fileID: -5145772718758297144}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 592
 --- !u!114 &1487899942584039514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,6 +550,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 602
+--- !u!114 &3810729351546588808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Stage1Ev
+  m_EditorClassIdentifier: 
+  Path: event:/Stage1Ev
+  Guid:
+    Data1: -1134639255
+    Data2: 1281587339
+    Data3: -1021990743
+    Data4: 2017873024
+  Banks:
+  - {fileID: 9184057755754722061}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 46080
 --- !u!114 &3825984220625457456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -438,6 +631,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1270
+--- !u!114 &4862666144426776633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Footstep/Wood/Walk3D
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Footstep/Wood/Walk3D
+  Guid:
+    Data1: 1843431572
+    Data2: 1214261050
+    Data3: 1779122357
+    Data4: -1620618647
+  Banks:
+  - {fileID: -5145772718758297144}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 592
 --- !u!114 &5892233939858152429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -453,10 +673,66 @@ MonoBehaviour:
   Path: Assets/Resources/CNW_Resources/FMOD/Bank/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638858551906913732
+  lastModified: 638863700984881675
   FileSizes:
   - Name: 
-    Value: 1798
+    Value: 2124
+  Exists: 1
+--- !u!114 &6116756060286374189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Footstep/Flying
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Footstep/Flying
+  Guid:
+    Data1: 1824508941
+    Data2: 1227813220
+    Data3: -17107583
+    Data4: -94944613
+  Banks:
+  - {fileID: -5145772718758297144}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6433569317672972309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/JumpLand/SurfaceType
+  m_EditorClassIdentifier: 
+  Name: SurfaceType
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 3946101226
+    data2: 989226476
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Leave
+  - Rock
+  - Sand
+  - Water
+  - Wood
   Exists: 1
 --- !u!114 &7102863931407866379
 MonoBehaviour:
@@ -540,6 +816,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 843
+--- !u!114 &8250194696055438495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Stage1
+  m_EditorClassIdentifier: 
+  Path: event:/Stage1
+  Guid:
+    Data1: -1115644862
+    Data2: 1263255442
+    Data3: 1120014210
+    Data4: 650977954
+  Banks:
+  - {fileID: 9184057755754722061}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 46080
 --- !u!114 &8294659772009398871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -621,3 +924,49 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 488
+--- !u!114 &9020134224503356698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Footstep/JumpStart
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Footstep/JumpStart
+  Guid:
+    Data1: -760236321
+    Data2: 1245087702
+    Data3: -1428225102
+    Data4: 16023528
+  Banks:
+  - {fileID: -5145772718758297144}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -9158789412184354503}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1168
+--- !u!114 &9184057755754722061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/BGM.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Resources/CNW_Resources/FMOD/Bank/BGM.bank
+  Name: BGM
+  StudioPath: bank:/BGM
+  lastModified: 638863700984834281
+  FileSizes: []
+  Exists: 1
