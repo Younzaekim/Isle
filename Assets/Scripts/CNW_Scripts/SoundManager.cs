@@ -6,7 +6,7 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance { get; private set; }
     [SerializeField]
-    private string[] banksToLoad = { "SFX", "BGM", "Master", "Master.srings" };
+    private string[] banksToLoad = { "SFX", "BGM", "Master", "Master.strings" };
 
     private void Awake()
     {
@@ -21,7 +21,7 @@ public class SoundManager : MonoBehaviour
 
         LoadBanks(); // 모든 사운드가 담긴 Bank파일을 로드
     }
-    
+
     private void LoadBanks()
     {
         foreach (var bank in banksToLoad)

@@ -7,8 +7,10 @@ public class SoundToAnimationTrigger : MonoBehaviour
 
     private void Awake()
     {
-        surfaceSensor = GetComponent<SurfaceSensor>();
+        surfaceSensor = GetComponentInChildren<SurfaceSensor>();
+        Debug.Log(surfaceSensor);
         footstepPlayer = GetComponentInChildren<FootstepPlayer>();
+        Debug.Log(footstepPlayer);
     }
 
     public void AnimationEvent_Footstep()
