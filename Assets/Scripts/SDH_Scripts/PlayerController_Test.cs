@@ -7,19 +7,22 @@ public class PlayerController_Test : MonoBehaviour
     [SerializeField] private float jumpForce = 6f;
     [SerializeField] private float mouseSensitivity = 3f;
     [SerializeField] private float fallSpeed = 1.5f;
-    [SerializeField] private float flyingTime = 1.5f;
+    [SerializeField] public float flyingTime = 1.5f;
     [SerializeField] private Transform camTarget;
 
     [SerializeField] private Transform groundCheck; // 바닥 체크 지점
     [SerializeField] private float groundDistance = 0.5f; // 구체 반지름
     [SerializeField] private LayerMask groundMask; // Ground 레이어
 
+    [SerializeField] private float flyForce = 50f; // 시작 힘
+    [SerializeField] private float minFlyForce = 5f; // 최소 힘 (유지되는 힘)
+
     private Rigidbody rb;
     public bool isGrounded { get; private set; } = true;
     private bool canFly = true;
     public bool isFlying { get; private set; } = false;
     public bool isAirborne { get; private set; } = false;
-    private float flyingTimer = 0f;
+    public float flyingTimer { get; private set; } = 0f;
 
     private void Start()
     {
@@ -115,9 +118,6 @@ public class PlayerController_Test : MonoBehaviour
         }
     }
 
-    [SerializeField] private float flyForce = 50f; // 시작 힘
-    [SerializeField] private float minFlyForce = 5f; // 최소 힘 (유지되는 힘)
-
     private void StartFly()
     {
         isFlying = true;
@@ -159,8 +159,6 @@ public class PlayerController_Test : MonoBehaviour
         }
     }
 
-
-
     private void StopFly()
     {
         isFlying = false;
@@ -178,6 +176,7 @@ public class PlayerController_Test : MonoBehaviour
             isGrounded = true;
             canFly = true;
             isAirborne = false;
+            flyingTimer = 0f;
             StopFly();
         }
         else
@@ -195,26 +194,4 @@ public class PlayerController_Test : MonoBehaviour
             Gizmos.DrawWireSphere(groundCheck.position, groundDistance);
         }
     }
-
-    /*
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            //땅에 닿으면 날기 멈춤
-            isGrounded = true;
-            canFly = true;
-            StopFly();
-        }
-    }
-    
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            //땅에서 떨어지면 날 수 있음
-            isGrounded = false;
-        }
-    }
-    */
 }
