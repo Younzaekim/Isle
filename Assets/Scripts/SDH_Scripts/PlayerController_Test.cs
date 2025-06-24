@@ -17,6 +17,8 @@ public class PlayerController_Test : MonoBehaviour
     [SerializeField] private float flyForce = 50f; // 시작 힘
     [SerializeField] private float minFlyForce = 5f; // 최소 힘 (유지되는 힘)
 
+    [SerializeField] private bool isSuperFlyMode = false; // Super Fly 모드 On/Off
+
     private Rigidbody rb;
     public bool isGrounded { get; private set; } = true;
     private bool canFly = true;
@@ -34,6 +36,26 @@ public class PlayerController_Test : MonoBehaviour
         GroundCheck();
         Jump();
         FlyHandler();
+        SuperFlyToggle();
+    }
+
+    private void SuperFlyToggle()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            isSuperFlyMode = !isSuperFlyMode;
+
+            if (isSuperFlyMode)
+            {
+                flyingTime = Mathf.Infinity; // 시간 무제한
+                flyForce = 500;
+            }
+            else
+            {
+                flyingTime = 1.5f; // 기본 비행 시간 복구
+                flyForce = 50;
+            }
+        }
     }
 
     private void FixedUpdate()
