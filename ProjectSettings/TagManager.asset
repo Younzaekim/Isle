@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
+  - Leave
+  - Rock
+  - Sand
+  - Water
+  - Wood
   - Zone1
   - Zone2
   - Zone3
