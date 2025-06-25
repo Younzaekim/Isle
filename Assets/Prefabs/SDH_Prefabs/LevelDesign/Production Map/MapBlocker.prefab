@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 862831802562293610}
   - component: {fileID: 2756241003232604197}
   m_Layer: 0
-  m_Name: Map_Blocker
+  m_Name: MapBlocker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
