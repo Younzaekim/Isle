@@ -98,7 +98,7 @@ MonoBehaviour:
   Path: Assets/Resources/CNW_Resources/FMOD/Bank/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638863754253968261
+  lastModified: 638863754250000000
   FileSizes: []
   Exists: 1
 --- !u!114 &-4401344399455072920
@@ -287,7 +287,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 5892233939858152429}
   cacheVersion: 131847
-  cacheTime: 638863754253968261
+  cacheTime: 638863754250000000
   SerializableEventsDict:
   - key: event:/SFX/Player/Footstep/Sand/Jump_Land2D
     index: 0
@@ -383,7 +383,7 @@ MonoBehaviour:
   Path: Assets/Resources/CNW_Resources/FMOD/Bank/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638863754253400144
+  lastModified: 638863754250000000
   FileSizes: []
   Exists: 1
 --- !u!114 &660553697665749869
@@ -673,7 +673,7 @@ MonoBehaviour:
   Path: Assets/Resources/CNW_Resources/FMOD/Bank/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638863754253406118
+  lastModified: 638863754250000000
   FileSizes:
   - Name: 
     Value: 2124
@@ -967,6 +967,6 @@ MonoBehaviour:
   Path: Assets/Resources/CNW_Resources/FMOD/Bank/BGM.bank
   Name: BGM
   StudioPath: bank:/BGM
-  lastModified: 638863754253352084
+  lastModified: 638863754250000000
   FileSizes: []
   Exists: 1
