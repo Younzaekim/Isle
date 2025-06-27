@@ -387,6 +387,108 @@ Transform:
   - {fileID: 4089363351074273665}
   m_Father: {fileID: 7272256223064672936}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &530458738073756055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2703698120374896263}
+  - component: {fileID: 9178999791520870927}
+  - component: {fileID: 58477881030036914}
+  m_Layer: 0
+  m_Name: CinemachineCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2703698120374896263
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530458738073756055}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: -3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3009528803365028917}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9178999791520870927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530458738073756055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Priority:
+    Enabled: 0
+    m_Value: 0
+  OutputChannel: 1
+  StandbyUpdate: 2
+  m_StreamingVersion: 20241001
+  m_LegacyPriority: 0
+  Target:
+    TrackingTarget: {fileID: 6022688929502062509}
+    LookAtTarget: {fileID: 0}
+    CustomLookAtTarget: 0
+  Lens:
+    FieldOfView: 105
+    OrthographicSize: 5
+    NearClipPlane: 0.3
+    FarClipPlane: 1000
+    Dutch: 0
+    ModeOverride: 0
+    PhysicalProperties:
+      GateFit: 2
+      SensorSize: {x: 21.946, y: 16.002}
+      LensShift: {x: 0, y: 0}
+      FocusDistance: 10
+      Iso: 200
+      ShutterSpeed: 0.005
+      Aperture: 16
+      BladeCount: 5
+      Curvature: {x: 2, y: 11}
+      BarrelClipping: 0.25
+      Anamorphism: 0
+  BlendHint: 0
+--- !u!114 &58477881030036914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530458738073756055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 625c14eee3ad46c99df7c7c891ef668a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damping: {x: 0.1, y: 0.5, z: 0.3}
+  ShoulderOffset: {x: 0, y: 1, z: -1}
+  VerticalArmLength: 1
+  CameraSide: 1
+  CameraDistance: 2
+  AvoidObstacles:
+    Enabled: 0
+    CollisionFilter:
+      serializedVersion: 2
+      m_Bits: 1
+    IgnoreTag: 
+    CameraRadius: 0.2
+    DampingIntoCollision: 0
+    DampingFromCollision: 0.5
 --- !u!1 &615527783423457157
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,8 +814,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e8fb85582d75414baf882a105338d9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fillAmount: 1
-  content: {fileID: 2094688975032627096}
+  gauge: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &1198404727378777726
 GameObject:
   m_ObjectHideFlags: 0
@@ -2320,6 +2422,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2703698120374896263}
   - {fileID: 423954874414343341}
   - {fileID: 6022688929502062509}
   - {fileID: 7434030561306849338}
@@ -2357,15 +2460,14 @@ MonoBehaviour:
   mouseSensitivity: 3
   fallSpeed: 1.5
   flyingTime: 1.5
+  flyForce: 50
+  minFlyForce: 20
   camTarget: {fileID: 6022688929502062509}
   groundCheck: {fileID: 7434030561306849338}
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
     m_Bits: 64
-  flyForce: 50
-  minFlyForce: 20
-  isSuperFlyMode: 0
 --- !u!114 &7695327862380944876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2485,7 +2587,6 @@ MonoBehaviour:
     respawnPoint: {fileID: 0}
   - zoneTag: Zone3
     respawnPoint: {fileID: 0}
-  currentZone: 
 --- !u!1 &5639288989983203805
 GameObject:
   m_ObjectHideFlags: 0
