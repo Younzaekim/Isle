@@ -507,13 +507,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62992f74598e9cc49b3620db0011621a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadingScreen: {fileID: 3263009089491434057}
-  mainMenu: {fileID: 5368488717070323464}
+  mainMenuScreen: {fileID: 5368488717070323464}
   settingsScreen: {fileID: 4542567041964728163}
-  loadingSlider: {fileID: 7323690953693015176}
   fullscreenButton: {fileID: 1189718199}
   fullscreenButtonText: {fileID: 1898456956}
   volumeSlider: {fileID: 1670101725}
+  loadingScreen: {fileID: 3263009089491434057}
+  loadingSlider: {fileID: 7323690953693015176}
 --- !u!4 &1833290719
 Transform:
   m_ObjectHideFlags: 0
