@@ -4,7 +4,7 @@ public class SurfaceSensor : MonoBehaviour
 {
     public float rayDistance = 1.2f;
 
-    public SurfaceType CurrentSurface { get; private set; } = SurfaceType.Leave;
+    public SurfaceType CurrentSurface { get; private set; } = SurfaceType.Sand;
 
     private void Update()
     {
@@ -21,10 +21,10 @@ public class SurfaceSensor : MonoBehaviour
             switch (tag)
             {
                 case "Rock": CurrentSurface = SurfaceType.Rock; break;
-                case "Sand": CurrentSurface = SurfaceType.Sand; break;
+                case "Leave": CurrentSurface = SurfaceType.Leave; break;
                 case "Wood": CurrentSurface = SurfaceType.Wood; break;
                 case "Water": CurrentSurface = SurfaceType.Water; break;
-                default: CurrentSurface = SurfaceType.Leave; break;
+                default: CurrentSurface = SurfaceType.Sand; break;
             }
         }
         else
