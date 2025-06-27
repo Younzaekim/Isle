@@ -16,7 +16,7 @@ class UI_ButtonFloat : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     void Update()
     {
         Vector3 target = isHovering ? originalPosition + Vector3.up * floatHeight : originalPosition;
-        transform.localPosition = Vector3.Lerp(transform.localPosition, target, Time.deltaTime * floatSpeed);
+        transform.localPosition = Vector3.Lerp(transform.localPosition, target, Time.unscaledDeltaTime * floatSpeed);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
