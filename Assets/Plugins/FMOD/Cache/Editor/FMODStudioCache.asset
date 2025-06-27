@@ -71,7 +71,7 @@ MonoBehaviour:
   Path: Assets/Resources/CNW_Resources/FMOD/Bank/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638865562033481546
+  lastModified: 638863754250000000
   FileSizes: []
   Exists: 1
 --- !u!114 &-377652798631581855
@@ -131,7 +131,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 5892233939858152429}
   cacheVersion: 131847
-  cacheTime: 638865562033481546
+  cacheTime: 638863754250000000
   SerializableEventsDict:
   - key: event:/SFX/Player/Footstep/Sand/Jump_Land2D
     index: 0
@@ -202,10 +202,329 @@ MonoBehaviour:
   Path: Assets/Resources/CNW_Resources/FMOD/Bank/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638865562033041592
+  lastModified: 638863754250000000
   FileSizes: []
   Exists: 1
---- !u!114 &1574378060839904124
+--- !u!114 &660553697665749869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Footstep/Wood/Walk2D
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Footstep/Wood/Walk2D
+  Guid:
+    Data1: 1075719039
+    Data2: 1313811349
+    Data3: -1722355030
+    Data4: 1444811246
+  Banks:
+  - {fileID: -5145772718758297144}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 592
+--- !u!114 &1487899942584039514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Footstep/Leave/Jump_Land2D
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Footstep/Leave/Jump_Land2D
+  Guid:
+    Data1: 359748017
+    Data2: 1329301015
+    Data3: 1573658005
+    Data4: 516748795
+  Banks:
+  - {fileID: -5145772718758297144}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 720
+--- !u!114 &1645901388525884224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Footstep/Sand/Jump_Land2D
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Footstep/Sand/Jump_Land2D
+  Guid:
+    Data1: 934924295
+    Data2: 1087985220
+    Data3: 1101907357
+    Data4: -527924922
+  Banks:
+  - {fileID: -5145772718758297144}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 695
+--- !u!114 &1879407884031199386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walk/SurfaceType
+  m_EditorClassIdentifier: 
+  Name: SurfaceType
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 3946101226
+    data2: 989226476
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Leave
+  - Rock
+  - Sand
+  - Water
+  - Wood
+  Exists: 1
+--- !u!114 &2207254272810222818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Footstep/Water/Walk3D
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Footstep/Water/Walk3D
+  Guid:
+    Data1: -363184053
+    Data2: 1075247685
+    Data3: 2016590979
+    Data4: 1278022134
+  Banks:
+  - {fileID: -5145772718758297144}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 843
+--- !u!114 &2620772886658080095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Footstep/Leave/Jump_Start2D
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Footstep/Leave/Jump_Start2D
+  Guid:
+    Data1: -511340077
+    Data2: 1314150703
+    Data3: 2088350097
+    Data4: 821629578
+  Banks:
+  - {fileID: -5145772718758297144}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 602
+--- !u!114 &3810729351546588808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Stage1Ev
+  m_EditorClassIdentifier: 
+  Path: event:/Stage1Ev
+  Guid:
+    Data1: -1134639255
+    Data2: 1281587339
+    Data3: -1021990743
+    Data4: 2017873024
+  Banks:
+  - {fileID: 9184057755754722061}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 46080
+--- !u!114 &3825984220625457456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Footstep/Sand/Walk3D
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Footstep/Sand/Walk3D
+  Guid:
+    Data1: 1096590711
+    Data2: 1183968601
+    Data3: -885811326
+    Data4: -962321895
+  Banks:
+  - {fileID: -5145772718758297144}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 734
+--- !u!114 &4648786464604607619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Footstep/Water/Jump_Land2D
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Footstep/Water/Jump_Land2D
+  Guid:
+    Data1: -906114065
+    Data2: 1207115021
+    Data3: 1963154092
+    Data4: -1608253535
+  Banks:
+  - {fileID: -5145772718758297144}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1270
+--- !u!114 &4862666144426776633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Footstep/Wood/Walk3D
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Footstep/Wood/Walk3D
+  Guid:
+    Data1: 1843431572
+    Data2: 1214261050
+    Data3: 1779122357
+    Data4: -1620618647
+  Banks:
+  - {fileID: -5145772718758297144}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 592
+--- !u!114 &5892233939858152429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Resources/CNW_Resources/FMOD/Bank/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638863754250000000
+  FileSizes:
+  - Name: 
+    Value: 2124
+  Exists: 1
+--- !u!114 &6116756060286374189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Footstep/Flying
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Footstep/Flying
+  Guid:
+    Data1: 1824508941
+    Data2: 1227813220
+    Data3: -17107583
+    Data4: -94944613
+  Banks:
+  - {fileID: -5145772718758297144}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6433569317672972309
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -381,6 +700,6 @@ MonoBehaviour:
   Path: Assets/Resources/CNW_Resources/FMOD/Bank/BGM.bank
   Name: BGM
   StudioPath: bank:/BGM
-  lastModified: 638865562033017173
+  lastModified: 638863754250000000
   FileSizes: []
   Exists: 1
