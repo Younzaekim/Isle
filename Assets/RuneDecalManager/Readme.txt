@@ -1,0 +1,1 @@
+Project창에서 PC_Renderer 검색 후 인스펙터 창에서 Add Renderer Feature->Decal 추가
