@@ -2497,14 +2497,13 @@ GameObject:
   m_Component:
   - component: {fileID: 3009528803365028917}
   - component: {fileID: 1766297379290593366}
-  - component: {fileID: 166747135654042481}
   - component: {fileID: 7695327862380944876}
   - component: {fileID: 5912607652659885814}
   - component: {fileID: 4731311986359125067}
   - component: {fileID: 2315067861079014592}
   - component: {fileID: 3809601331002716021}
   - component: {fileID: 5795247805488173661}
-  - component: {fileID: -8258221736496524662}
+  - component: {fileID: 804247103376565593}
   m_Layer: 0
   m_Name: Player_0627_ADD_Material
   m_TagString: Player
@@ -2548,31 +2547,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabToSpawn: {fileID: 0}
   spawnOffset: {x: 0, y: 0, z: 2}
---- !u!114 &166747135654042481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5617833333941011246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff04f06a6290d5843bc8ca911e181c57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 8
-  jumpForce: 6
-  mouseSensitivity: 3
-  fallSpeed: 1.5
-  flyingTime: 1.5
-  flyForce: 50
-  minFlyForce: 20
-  camTarget: {fileID: 6022688929502062509}
-  groundCheck: {fileID: 7434030561306849338}
-  groundDistance: 0.4
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!114 &7695327862380944876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2586,7 +2560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 3809601331002716021}
-  playerController: {fileID: 166747135654042481}
+  playerController: {fileID: 0}
 --- !u!114 &5912607652659885814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2692,6 +2666,32 @@ MonoBehaviour:
     respawnPoint: {fileID: 0}
   - zoneTag: Zone3
     respawnPoint: {fileID: 0}
+--- !u!114 &804247103376565593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5617833333941011246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22abee5753a74ba4e9655f6d6bfb16a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 8
+  upwardLift: 10
+  jumpForce: 8
+  mouseSensitivity: 3
+  fallSpeed: 3
+  flyingTime: 3
+  forwardLift: 180
+  minFlyForce: 50
+  camTarget: {fileID: 0}
+  groundCheck: {fileID: 0}
+  groundDistance: 0.4
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &5639288989983203805
 GameObject:
   m_ObjectHideFlags: 0

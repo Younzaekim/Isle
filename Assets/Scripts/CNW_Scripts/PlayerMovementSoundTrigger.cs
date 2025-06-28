@@ -1,9 +1,9 @@
 using UnityEngine;
 
-[RequireComponent(typeof(PlayerController_Test))]
+[RequireComponent(typeof(PlayerController_Update))]
 public class PlayerMovementSoundTrigger : MonoBehaviour
 {
-    private PlayerController_Test player;
+    private PlayerController_Update player;
     private SurfaceSensor surfaceSensor;
     private PlayerSFX playerSFX;
 
@@ -12,7 +12,7 @@ public class PlayerMovementSoundTrigger : MonoBehaviour
 
     private void Awake()
     {
-        player = GetComponent<PlayerController_Test>();
+        player = GetComponent<PlayerController_Update>();
         surfaceSensor = GetComponentInChildren<SurfaceSensor>();
         playerSFX = GetComponentInChildren<PlayerSFX>();
     }
