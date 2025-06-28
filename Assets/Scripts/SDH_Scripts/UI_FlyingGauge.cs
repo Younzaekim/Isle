@@ -3,13 +3,10 @@ using UnityEngine.UI;
 
 public class UI_FlyingGauge : MonoBehaviour
 {
-    // 게이지 UI
-    [SerializeField] private Image gauge;
+    [SerializeField] private Image gauge; // 게이지 UI
+    [SerializeField] private PlayerController_Update player; // 인스펙터에서 할당할 플레이어 컨트롤러
 
-    // 인스펙터에서 할당할 플레이어 컨트롤러
-    [SerializeField] private PlayerController_Test player;
-
-    private void Update()
+    void Update()
     {
         // 플레이어가 할당되지 않았으면 처리하지 않음
         if (player == null)
