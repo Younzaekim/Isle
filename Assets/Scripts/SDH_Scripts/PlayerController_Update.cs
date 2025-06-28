@@ -69,12 +69,12 @@ public class PlayerController_Update : MonoBehaviour
             if (isSuperFlyMode)
             {
                 flyingTime = Mathf.Infinity; // 비행 시간 무제한
-                forwardLift = 500;              // 비행 시작 힘 강화
+                forwardLift = 500;           // 비행 시작 힘 강화
             }
             else
             {
-                flyingTime = 1.5f;           // 비행 시간 기본값 복구
-                forwardLift = 50;               // 비행 시작 힘 복구
+                flyingTime = 3f;           // 비행 시간 기본값 복구
+                forwardLift = 180f;            // 비행 시작 힘 복구
             }
         }
     }
@@ -111,7 +111,7 @@ public class PlayerController_Update : MonoBehaviour
 
                 // x축 회전: 앞으로 숙임 각도 설정
                 // 비행 시간에 따라 점점 숙이는 느낌을 줄 수도 있음
-                float targetXRotation = isFlying ? Mathf.Lerp(0f, -45f, flyingTimer / flyingTime) : 0f;
+                float targetXRotation = isFlying ? Mathf.Lerp(0f, -30f, flyingTimer / flyingTime) : 0f;
                 float xRotation = Mathf.LerpAngle(transform.eulerAngles.x, targetXRotation, Time.deltaTime * 5f);
 
                 // z축: 좌우 이동 입력에 따라 기울기 적용
@@ -173,9 +173,9 @@ public class PlayerController_Update : MonoBehaviour
 
     private void FlyHandler()
     {
-        if (isFlying)
+        if (isAirborne)
         {
-            flyingTimer += Time.deltaTime;
+            //flyingTimer += Time.deltaTime;
 
             if (flyingTimer >= flyingTime)
             {
@@ -196,10 +196,13 @@ public class PlayerController_Update : MonoBehaviour
 
             if (Input.GetKey(KeyCode.Space))
             {
+                isFlying = true;
+                flyingTimer += Time.deltaTime;
                 targetVelocity.y = upwardLift;
             }
             else
             {
+                isFlying = false;
                 targetVelocity.y = -fallSpeed;
             }
 

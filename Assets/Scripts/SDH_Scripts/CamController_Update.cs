@@ -9,12 +9,12 @@ public class CamController_Update : MonoBehaviour
     private float yaw = 0f;
     private float pitch = 0f;
 
-    void Start()
+    private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    void Update()
+    private void Update()
     {
         float mouseX = Input.GetAxisRaw("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxisRaw("Mouse Y") * mouseSensitivity * Time.deltaTime;
@@ -22,23 +22,20 @@ public class CamController_Update : MonoBehaviour
         yaw += mouseX;
         pitch -= mouseY;
 
-        // 플레이어 x로테이션 값 보정
-        float playerPitch = 0f;
-        if (player != null && player.isFlying)
+        if (player != null && player.isAirborne)
         {
-            playerPitch = player.transform.eulerAngles.x;
-            if (playerPitch > 180f) playerPitch -= 360f;
-        }
+            Vector3 angles = player.transform.eulerAngles;
 
-        // 플레이어가 비행 중이면 마우스 pitch와 플레이어 pitch를 합침 (가중치 조절 가능)
-        if (player != null && player.isFlying)
+            float playerPitch = angles.x > 180f ? angles.x - 360f : angles.x;
+
+            float pitchOffset = Mathf.Clamp(pitch, pitchClamp.x, pitchClamp.y);
+            pitch = playerPitch + pitchOffset;
+        }
+        else
         {
-            pitch = Mathf.Lerp(pitch, playerPitch, 0.5f); // 0.5는 가중치 예시
+            pitch = Mathf.Clamp(pitch, pitchClamp.x, pitchClamp.y);
         }
-
-        pitch = Mathf.Clamp(pitch, pitchClamp.x, pitchClamp.y);
 
         transform.rotation = Quaternion.Euler(pitch, yaw, 0f);
     }
-
 }
