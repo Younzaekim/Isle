@@ -3,11 +3,10 @@ using UnityEngine.AI;
 
 public class AnimalRabbit : Animal
 {
-    [SerializeField] private float detectRange = 3f;      // 감지 반경
+    [SerializeField] private float detectRange = 2f;      // 감지 반경
     [SerializeField] private float escapeDistance = 5f;   // 도망 거리
 
     private Transform playerTransform;
-    private bool isRunLeft = true;
 
     protected new void Start()
     {
@@ -18,9 +17,7 @@ public class AnimalRabbit : Animal
     }
 
     void Update()
-    {
-        if (playerTransform == null) return;
-               
+    {               
         Collider[] hits = Physics.OverlapSphere(transform.position, detectRange);
         foreach (var hit in hits)
         {
