@@ -9,8 +9,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float fallSpeed = 0.5f;
     [SerializeField] private float flyingTime = 7f;
     [SerializeField] private Transform camTarget;
+    [SerializeField] private float interactDistance = 2f;
 
     private Rigidbody rb;
+    private Animator anim;
+
     public bool isGrounded { get; private set; } = true;
     private bool canFly = true;
     public bool isFlying { get; private set; } = false;
@@ -20,12 +23,18 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
     {
         Jump();
         FlyHandler();
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            InteractWithAnimal();
+        }
     }
 
     private void FixedUpdate()
@@ -128,13 +137,31 @@ public class PlayerController : MonoBehaviour
             StopFly();
         }
     }
-    
+
     private void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
             //땅에서 떨어지면 날 수 있음
             isGrounded = false;
+        }
+    }
+
+
+    private void InteractWithAnimal()
+    {
+        Vector3 sphereCenter = transform.position + transform.forward * (interactDistance * 0.5f);
+        float sphereRadius = interactDistance;
+
+        Collider[] hits = Physics.OverlapSphere(sphereCenter, sphereRadius);
+        foreach (var hit in hits)
+        {
+            Animal animal = hit.GetComponent<Animal>();
+            if (animal != null)
+            {
+                animal.Interact();
+                break;
+            }
         }
     }
 }
