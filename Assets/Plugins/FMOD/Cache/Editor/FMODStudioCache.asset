@@ -70,7 +70,7 @@ MonoBehaviour:
   Path: Assets/Resources/CNW_Resources/FMOD/Bank/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638865562030000000
+  lastModified: 638865562033481546
   FileSizes: []
   Exists: 1
 --- !u!114 &-2814048293048559009
@@ -131,7 +131,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 5892233939858152429}
   cacheVersion: 131847
-  cacheTime: 638865562030000000
+  cacheTime: 638865562033481546
   SerializableEventsDict:
   - key: event:/SFX/Player/Glide
     index: 0
@@ -163,6 +163,7 @@ MonoBehaviour:
     Data4: 16023528
   Banks:
   - {fileID: -3160045882218270531}
+  - {fileID: -5145772718758297144}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -186,7 +187,7 @@ MonoBehaviour:
   Path: Assets/Resources/CNW_Resources/FMOD/Bank/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638863754250000000
+  lastModified: 638865562033041592
   FileSizes: []
   Exists: 1
 --- !u!114 &3232256730907147982
@@ -261,7 +262,7 @@ MonoBehaviour:
   Path: Assets/Resources/CNW_Resources/FMOD/Bank/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638865562030000000
+  lastModified: 638865562033046271
   FileSizes:
   - Name: 
     Value: 1084
@@ -293,6 +294,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
+--- !u!114 &8538616769379232364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/JumpLand
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/JumpLand
+  Guid:
+    Data1: -475764904
+    Data2: 1249533407
+    Data3: -436727160
+    Data4: 1277431625
+  Banks:
+  - {fileID: -3160045882218270531}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -273654100359394987}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1270
 --- !u!114 &8678923750192740892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,34 +366,6 @@ MonoBehaviour:
   Path: Assets/Resources/CNW_Resources/FMOD/Bank/BGM.bank
   Name: BGM
   StudioPath: bank:/BGM
-  lastModified: 638865562030000000
+  lastModified: 638865562033017173
   FileSizes: []
   Exists: 1
---- !u!114 &8538616769379232364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Player/JumpLand
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Player/JumpLand
-  Guid:
-    Data1: -475764904
-    Data2: 1249533407
-    Data3: -436727160
-    Data4: 1277431625
-  Banks:
-  - {fileID: -3160045882218270531}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -273654100359394987}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1270
