@@ -30,7 +30,6 @@
     },
     "com.unity.cinemachine": {
       "version": "3.1.4",
-
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -235,13 +234,6 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
-    "com.unity.settings-manager": {
-      "version": "2.0.1",
-      "depth": 2,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
     "com.unity.shadergraph": {
       "version": "17.0.4",
       "depth": 0,
@@ -261,8 +253,6 @@
       },
       "url": "https://packages.unity.com"
     },
-
-
     "com.unity.terrain-tools": {
       "version": "5.1.2",
       "depth": 0,
@@ -307,13 +297,14 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.toonshader": {
-      "version": "file:C:/Users/YJ/Desktop/com.unity.toonshader-0.11.0-preview/package",
+      "version": "0.11.1-preview",
       "depth": 0,
-      "source": "local",
+      "source": "registry",
       "dependencies": {
-        "com.unity.film-internal-utilities": "0.19.2-preview",
-        "com.unity.render-pipelines.core": "10.0.0"
-      }
+        "com.unity.render-pipelines.core": "10.0.0",
+        "com.unity.film-internal-utilities": "0.19.2-preview"
+      },
+      "url": "https://packages.unity.com"
     },
     "com.unity.ugui": {
       "version": "2.0.0",
