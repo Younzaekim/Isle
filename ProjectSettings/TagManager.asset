@@ -13,13 +13,12 @@ TagManager:
   - Zone1
   - Zone2
   - Zone3
-  - Water
-  - Rock
+  - Animal
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - Ground
