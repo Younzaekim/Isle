@@ -4,7 +4,7 @@ public class CamController_Update : MonoBehaviour
 {
     [SerializeField] private PlayerController_Update player;
     [SerializeField] private float mouseSensitivity = 150f;
-    [SerializeField] private Vector2 pitchClamp = new Vector2(-40f, 80f);
+    [SerializeField] private Vector2 pitchClamp = new Vector2(-20f, 80f);
 
     private float yaw = 0f;
     private float pitch = 0f;

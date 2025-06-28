@@ -6,21 +6,21 @@ public class PlayerController_Update : MonoBehaviour
     [Header("Movement and Jump")]
     [SerializeField] private float moveSpeed = 8f;
     [SerializeField] private float upwardLift = 10f;
-    [SerializeField] private float jumpForce = 6f;
+    [SerializeField] private float jumpForce = 8f;
     [SerializeField] private float mouseSensitivity = 3f;
-    [SerializeField] private float fallSpeed = 1.5f;
+    [SerializeField] private float fallSpeed = 3f;
 
     [Header("Flying")]
-    [SerializeField] public float flyingTime = 1.5f; // 기본 비행 지속 시간
-    [SerializeField] private float forwardLift = 50f;   // 초기 비행 힘
-    [SerializeField] private float minFlyForce = 5f; // 비행 후반의 최소 힘
+    [SerializeField] public float flyingTime = 3f; // 기본 비행 지속 시간
+    [SerializeField] private float forwardLift = 180f;   // 초기 비행 힘
+    [SerializeField] private float minFlyForce = 50f; // 비행 후반의 최소 힘
 
     [Header("Camera")]
     [SerializeField] private Transform camTarget;
 
     [Header("GroundCheck")]
     [SerializeField] private Transform groundCheck;
-    [SerializeField] private float groundDistance = 0.5f;
+    [SerializeField] private float groundDistance = 0.4f;
     [SerializeField] private LayerMask groundMask;
 
     private bool canFly = true;
