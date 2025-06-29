@@ -4,77 +4,70 @@ using UnityEngine;
 public class PlayerController_Update : MonoBehaviour
 {
     [Header("Movement and Jump")]
-    [SerializeField] private float moveSpeed = 8f;
-    [SerializeField] private float upwardLift = 10f;
-    [SerializeField] private float jumpForce = 8f;
-    [SerializeField] private float mouseSensitivity = 3f;
-    [SerializeField] private float fallSpeed = 3f;
+    [SerializeField] private float moveSpeed = 8f;        // 이동 속도
+    [SerializeField] private float upwardLift = 10f;      // 비행 시 상승 힘
+    [SerializeField] private float jumpForce = 8f;        // 점프 힘
+    [SerializeField] private float mouseSensitivity = 3f; // 마우스 감도 (사용하지 않음)
+    [SerializeField] private float fallSpeed = 3f;        // 낙하 속도
 
     [Header("Flying")]
-    [SerializeField] public float flyingTime = 3f; // 기본 비행 지속 시간
-    [SerializeField] private float forwardLift = 180f;   // 초기 비행 힘
-    [SerializeField] private float minFlyForce = 50f; // 비행 후반의 최소 힘
+    [SerializeField] public float flyingTime = 3f;     // 기본 비행 가능 시간
+    [SerializeField] private float forwardLift = 180f; // 비행 시 전방 추진력
+    [SerializeField] private float minFlyForce = 50f;  // 비행 후반 최소 추진력
 
     [Header("Camera")]
-    [SerializeField] private Transform camTarget;
+    [SerializeField] private Transform camTarget; // 카메라 기준 회전용 타겟
 
     [Header("GroundCheck")]
-    [SerializeField] private Transform groundCheck;
-    [SerializeField] private float groundDistance = 0.4f;
-    [SerializeField] private LayerMask groundMask;
+    [SerializeField] private Transform groundCheck;       // 바닥 체크용 위치
+    [SerializeField] private float groundDistance = 0.4f; // 바닥 체크 거리
+    [SerializeField] private LayerMask groundMask;        // 어떤 레이어가 바닥인지 지정
 
-    private bool canFly = true;
-    private bool isSuperFlyMode = false; // F 키로 무제한 비행 모드 토글
-    private Rigidbody rb;
+    private bool canFly = true;          // 비행 가능 여부
+    private bool isSuperFlyMode = false; // 무제한 비행 모드
+    private Rigidbody rb;                // 리지드바디 컴포넌트
 
-    public bool isGrounded { get; private set; } = true;  // 땅에 붙어 있는지 여부
-    public bool isFlying { get; private set; } = false;   // 비행 중인지 여부
-    public bool isAirborne { get; private set; } = false; // 공중에 있는 상태 (점프 또는 비행)
-    public float flyingTimer { get; private set; } = 0f;  // 비행 시간 누적
+    // 상태 프로퍼티
+    public bool isGrounded { get; private set; } = true;
+    public bool isFlying { get; private set; } = false;
+    public bool isAirborne { get; private set; } = false;
+    public float flyingTimer { get; private set; } = 0f;
 
     private void Start()
     {
-        // Rigidbody 컴포넌트 캐싱
+        // Rigidbody 캐싱
         rb = GetComponent<Rigidbody>();
     }
 
     private void Update()
     {
-        // 바닥 체크
-        GroundCheck();
-
-        // 점프 및 비행 시작
-        Jump();
-
-        // 비행 지속 처리
-        FlyHandler();
-
-        // Super Fly 모드 토글
-        SuperFlyToggle();
+        GroundCheck();    // 땅 체크
+        Jump();           // 점프 및 비행 시작
+        FlyHandler();     // 비행 지속 처리
+        SuperFlyToggle(); // 무제한 비행 모드 토글
     }
 
     private void FixedUpdate()
     {
-        // 실제 이동 처리 (물리 기반)
-        Move();
+        Move(); // 물리 기반 이동
     }
 
     private void SuperFlyToggle()
     {
-        // F 키로 Super Fly 모드 토글
+        // F 키로 무제한 비행 모드 토글
         if (Input.GetKeyDown(KeyCode.F))
         {
             isSuperFlyMode = !isSuperFlyMode;
 
             if (isSuperFlyMode)
             {
-                flyingTime = Mathf.Infinity; // 비행 시간 무제한
-                forwardLift = 500;           // 비행 시작 힘 강화
+                flyingTime = Mathf.Infinity;
+                forwardLift = 500f;
             }
             else
             {
-                flyingTime = 3f;           // 비행 시간 기본값 복구
-                forwardLift = 180f;            // 비행 시작 힘 복구
+                flyingTime = 3f;
+                forwardLift = 180f;
             }
         }
     }
@@ -85,7 +78,7 @@ public class PlayerController_Update : MonoBehaviour
         float moveXInput = Input.GetAxisRaw("Horizontal");
         float moveZInput = Input.GetAxisRaw("Vertical");
 
-        // 카메라 방향 기준 이동 벡터 계산
+        // 카메라 방향 기준 이동 방향 계산
         Vector3 camZDir = camTarget.forward;
         Vector3 camXDir = camTarget.right;
         camZDir.y = 0f;
@@ -93,28 +86,28 @@ public class PlayerController_Update : MonoBehaviour
         camZDir.Normalize();
         camXDir.Normalize();
 
+        // 이동 방향 및 속도 계산
         Vector3 moveDir = camZDir * moveZInput + camXDir * moveXInput;
         Vector3 velocity = moveDir.normalized * moveSpeed;
         velocity.y = rb.linearVelocity.y;
 
-        // 최종 속도 적용
+        // 속도 적용
         rb.linearVelocity = velocity;
 
-        // 공중에서 이동 중 회전 및 기울기 처리
+        // 공중 회전 처리
         if (isAirborne)
         {
             if (moveDir != Vector3.zero)
             {
-                // y축: 카메라 방향으로 서서히 회전
+                // y 회전 (카메라 방향으로)
                 Quaternion targetYRotation = Quaternion.LookRotation(moveDir, Vector3.up);
                 float yRotation = Mathf.LerpAngle(transform.eulerAngles.y, targetYRotation.eulerAngles.y, Time.deltaTime * 1.5f);
 
-                // x축 회전: 앞으로 숙임 각도 설정
-                // 비행 시간에 따라 점점 숙이는 느낌을 줄 수도 있음
+                // x 회전 (앞으로 기울임)
                 float targetXRotation = isFlying ? Mathf.Lerp(0f, -30f, flyingTimer / flyingTime) : 0f;
                 float xRotation = Mathf.LerpAngle(transform.eulerAngles.x, targetXRotation, Time.deltaTime * 5f);
 
-                // z축: 좌우 이동 입력에 따라 기울기 적용
+                // z 회전 (좌우 기울기)
                 float targetZRotation = -moveXInput * 20f;
                 float zRotation = Mathf.LerpAngle(transform.eulerAngles.z, targetZRotation, Time.deltaTime * 8f);
 
@@ -122,16 +115,16 @@ public class PlayerController_Update : MonoBehaviour
             }
             else
             {
+                // 정면 복구 회전
                 Quaternion currentRot = transform.rotation;
-                Quaternion targetRot = Quaternion.Euler(0f, transform.eulerAngles.y, 0f);  // x,z 축 0도로 회복, y축은 유지
-
+                Quaternion targetRot = Quaternion.Euler(0f, transform.eulerAngles.y, 0f);
                 float maxDegreesDelta = upwardLift * Time.deltaTime;
                 transform.rotation = Quaternion.RotateTowards(currentRot, targetRot, maxDegreesDelta);
             }
         }
         else
         {
-            // 지상에서는 빠르게 회전
+            // 지상에서는 빠른 회전
             if (moveDir != Vector3.zero)
             {
                 Quaternion toRotation = Quaternion.LookRotation(moveDir, Vector3.up);
@@ -166,7 +159,7 @@ public class PlayerController_Update : MonoBehaviour
         isAirborne = true;
         flyingTimer = 0f;
 
-        // y속도 제거 후 중력 제거
+        // 수직 속도 초기화 및 중력 제거
         rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
         rb.useGravity = false;
     }
@@ -183,24 +176,27 @@ public class PlayerController_Update : MonoBehaviour
 
             if (Input.GetKey(KeyCode.LeftControl))
             {
+                // 급강하
                 isFlying = false;
                 targetVelocity.y = -fallSpeed * 3f;
             }
             else if (Input.GetKey(KeyCode.Space) && canFlyUp)
             {
+                // 상승 비행
                 isFlying = true;
                 flyingTimer += Time.deltaTime;
                 targetVelocity.y = upwardLift;
             }
             else
             {
+                // 낙하
                 isFlying = false;
                 targetVelocity.y = -fallSpeed;
             }
 
             rb.linearVelocity = targetVelocity;
 
-            // 타이머가 다 되면 플라이 종료 상태만 갱신
+            // 비행 시간 종료 시
             if (flyingTimer >= flyingTime)
             {
                 StopFly();
@@ -208,10 +204,9 @@ public class PlayerController_Update : MonoBehaviour
         }
     }
 
-
     private void StopFly()
     {
-        // 비행 종료
+        // 비행 종료 처리
         isFlying = false;
         rb.useGravity = true;
     }
@@ -223,22 +218,17 @@ public class PlayerController_Update : MonoBehaviour
 
         if (isGrounded)
         {
-            // 바닥에 닿으면 비행 가능 및 상태 초기화
-            isGrounded = true;
+            // 바닥에 닿았을 때 상태 초기화
             canFly = true;
             isAirborne = false;
             flyingTimer = 0f;
             StopFly();
         }
-        else
-        {
-            isGrounded = false;
-        }
     }
 
     private void OnDrawGizmos()
     {
-        // 에디터에서 GroundCheck 확인용 기즈모
+        // 바닥 체크 영역 확인용 기즈모
         if (groundCheck != null)
         {
             Gizmos.color = Color.green;

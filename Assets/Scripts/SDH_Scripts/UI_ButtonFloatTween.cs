@@ -9,13 +9,13 @@ class UI_ButtonFloat : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     private Vector3 originalPosition; // 버튼 원래 위치 저장 변수
     private bool isHovering = false; // 마우스가 버튼 위에 있는지 여부
 
-    void Start()
+    private void Start()
     {
         // 시작할 때 현재 로컬 위치를 원래 위치로 저장
         originalPosition = transform.localPosition;
     }
 
-    void Update()
+    private void Update()
     {
         // 마우스가 버튼 위에 있으면 원래 위치에서 floatHeight 만큼 위로 이동 목표 설정
         // 아니면 원래 위치로 이동 목표 설정
