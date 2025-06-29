@@ -1,5 +1,59 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8139404978470196073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Ambience/4_SkyCastle_amb
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Ambience/4_SkyCastle_amb
+  Guid:
+    Data1: 1504989615
+    Data2: 1248768796
+    Data3: 1321521544
+    Data4: -17807448
+  Banks:
+  - {fileID: -5145772718758297144}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 64000
+--- !u!114 &-7883105857121955074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM/4_SkyCastle
+  m_EditorClassIdentifier: 
+  Path: event:/BGM/4_SkyCastle
+  Guid:
+    Data1: 635761470
+    Data2: 1096247112
+    Data3: 453499269
+    Data4: -824182522
+  Banks:
+  - {fileID: 9184057755754722061}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 111673
 --- !u!114 &-7752868390691374099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55,6 +109,87 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 64000
+--- !u!114 &-6307810057982603694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM/1_Glassland
+  m_EditorClassIdentifier: 
+  Path: event:/BGM/1_Glassland
+  Guid:
+    Data1: -340048626
+    Data2: 1124228809
+    Data3: -1427791441
+    Data4: 1075602545
+  Banks:
+  - {fileID: 9184057755754722061}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 136933
+--- !u!114 &-5374570567194088049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM/7_Away
+  m_EditorClassIdentifier: 
+  Path: event:/BGM/7_Away
+  Guid:
+    Data1: -1469430040
+    Data2: 1291916192
+    Data3: 1469871518
+    Data4: 88917544
+  Banks:
+  - {fileID: 9184057755754722061}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 70000
+--- !u!114 &-5372577278198321781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Animals/Rabbit
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Animals/Rabbit
+  Guid:
+    Data1: 1236705744
+    Data2: 1089258164
+    Data3: -56296051
+    Data4: 1771340984
+  Banks:
+  - {fileID: -5145772718758297144}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5040
 --- !u!114 &-5145772718758297144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,9 +205,63 @@ MonoBehaviour:
   Path: Assets/Resources/CNW_Resources/FMOD/Bank/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638865562030000000
+  lastModified: 638868607280190722
   FileSizes: []
   Exists: 1
+--- !u!114 &-4110504190547025940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM/2_Waterpool
+  m_EditorClassIdentifier: 
+  Path: event:/BGM/2_Waterpool
+  Guid:
+    Data1: -112876111
+    Data2: 1331899457
+    Data3: 1954900367
+    Data4: -1215219661
+  Banks:
+  - {fileID: 9184057755754722061}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 120946
+--- !u!114 &-3342220235279106936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Ambience/6_RockBridge_amb
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Ambience/6_RockBridge_amb
+  Guid:
+    Data1: 1884176361
+    Data2: 1303259189
+    Data3: 228554880
+    Data4: -1534038414
+  Banks:
+  - {fileID: -5145772718758297144}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3000
 --- !u!114 &-2814048293048559009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,6 +291,33 @@ MonoBehaviour:
   - Water
   - Wood
   Exists: 1
+--- !u!114 &-2135087931774507019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Ambience/2_Waterpool_amb
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Ambience/2_Waterpool_amb
+  Guid:
+    Data1: 510297620
+    Data2: 1164869937
+    Data3: -604302171
+    Data4: 746730617
+  Banks:
+  - {fileID: -5145772718758297144}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 45500
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,13 +341,28 @@ MonoBehaviour:
   - {fileID: 7288111341398119776}
   - {fileID: 394978359076737946}
   - {fileID: 3232256730907147982}
+  - {fileID: -6307810057982603694}
+  - {fileID: -7883105857121955074}
+  - {fileID: 9145284940005255253}
+  - {fileID: -4110504190547025940}
+  - {fileID: 1442044454081231693}
+  - {fileID: 4627278769441324125}
+  - {fileID: -2135087931774507019}
+  - {fileID: 4509052356663531272}
+  - {fileID: 4725934451510225190}
+  - {fileID: -8139404978470196073}
+  - {fileID: -5372577278198321781}
+  - {fileID: 1353920817931260231}
+  - {fileID: 4732338385052320999}
+  - {fileID: -5374570567194088049}
+  - {fileID: -3342220235279106936}
   EditorParameters: []
   MasterBanks:
   - {fileID: 507899739898414951}
   StringsBanks:
   - {fileID: 5892233939858152429}
   cacheVersion: 131847
-  cacheTime: 638865562030000000
+  cacheTime: 638868607280190722
   SerializableEventsDict:
   - key: event:/SFX/Player/Glide
     index: 0
@@ -143,6 +374,36 @@ MonoBehaviour:
     index: 3
   - key: event:/SFX/Player/Walk
     index: 4
+  - key: event:/BGM/1_Glassland
+    index: 5
+  - key: event:/BGM/4_SkyCastle
+    index: 6
+  - key: event:/BGM/3_SkyPlatform
+    index: 7
+  - key: event:/BGM/2_Waterpool
+    index: 8
+  - key: event:/BGM/5_Temple
+    index: 9
+  - key: event:/SFX/Ambience/3_SkyPlatform_amb
+    index: 10
+  - key: event:/SFX/Ambience/2_Waterpool_amb
+    index: 11
+  - key: event:/SFX/Animals/Frog
+    index: 12
+  - key: event:/SFX/Ambience/1_Glassland_amb
+    index: 13
+  - key: event:/SFX/Ambience/4_SkyCastle_amb
+    index: 14
+  - key: event:/SFX/Animals/Rabbit
+    index: 15
+  - key: event:/SFX/Animals/AnimalInteract
+    index: 16
+  - key: event:/BGM/6_RockBridge
+    index: 17
+  - key: event:/BGM/7_Away
+    index: 18
+  - key: event:/SFX/Ambience/6_RockBridge_amb
+    index: 19
 --- !u!114 &394978359076737946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,9 +448,63 @@ MonoBehaviour:
   Path: Assets/Resources/CNW_Resources/FMOD/Bank/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638863754250000000
+  lastModified: 638868607278392380
   FileSizes: []
   Exists: 1
+--- !u!114 &1353920817931260231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Animals/AnimalInteract
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Animals/AnimalInteract
+  Guid:
+    Data1: -1999245098
+    Data2: 1315795750
+    Data3: 410720640
+    Data4: -716867939
+  Banks:
+  - {fileID: -5145772718758297144}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3003
+--- !u!114 &1442044454081231693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM/5_Temple
+  m_EditorClassIdentifier: 
+  Path: event:/BGM/5_Temple
+  Guid:
+    Data1: 1631501771
+    Data2: 1094483852
+    Data3: 1970210469
+    Data4: 369975366
+  Banks:
+  - {fileID: 9184057755754722061}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 197041
 --- !u!114 &3232256730907147982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,6 +562,114 @@ MonoBehaviour:
   - Water
   - Wood
   Exists: 1
+--- !u!114 &4509052356663531272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Animals/Frog
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Animals/Frog
+  Guid:
+    Data1: 862300264
+    Data2: 1280508719
+    Data3: -1921180017
+    Data4: -2047272687
+  Banks:
+  - {fileID: -5145772718758297144}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2280
+--- !u!114 &4627278769441324125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Ambience/3_SkyPlatform_amb
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Ambience/3_SkyPlatform_amb
+  Guid:
+    Data1: 1815134481
+    Data2: 1203798883
+    Data3: -190651713
+    Data4: -732599065
+  Banks:
+  - {fileID: -5145772718758297144}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 64000
+--- !u!114 &4725934451510225190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Ambience/1_Glassland_amb
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Ambience/1_Glassland_amb
+  Guid:
+    Data1: 1562362261
+    Data2: 1340301454
+    Data3: -81898827
+    Data4: -501197291
+  Banks:
+  - {fileID: -5145772718758297144}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 80000
+--- !u!114 &4732338385052320999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM/6_RockBridge
+  m_EditorClassIdentifier: 
+  Path: event:/BGM/6_RockBridge
+  Guid:
+    Data1: 1285899014
+    Data2: 1337570203
+    Data3: 2075098498
+    Data4: -1502888271
+  Banks:
+  - {fileID: 9184057755754722061}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 70000
 --- !u!114 &5892233939858152429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,10 +685,10 @@ MonoBehaviour:
   Path: Assets/Resources/CNW_Resources/FMOD/Bank/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638865562030000000
+  lastModified: 638868607278396350
   FileSizes:
   - Name: 
-    Value: 1084
+    Value: 1814
   Exists: 1
 --- !u!114 &7288111341398119776
 MonoBehaviour:
@@ -351,6 +774,33 @@ MonoBehaviour:
   - Water
   - Wood
   Exists: 1
+--- !u!114 &9145284940005255253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM/3_SkyPlatform
+  m_EditorClassIdentifier: 
+  Path: event:/BGM/3_SkyPlatform
+  Guid:
+    Data1: 530792008
+    Data2: 1075240071
+    Data3: -40359751
+    Data4: -1177281657
+  Banks:
+  - {fileID: 9184057755754722061}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 285988
 --- !u!114 &9184057755754722061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,6 +816,6 @@ MonoBehaviour:
   Path: Assets/Resources/CNW_Resources/FMOD/Bank/BGM.bank
   Name: BGM
   StudioPath: bank:/BGM
-  lastModified: 638865562030000000
+  lastModified: 638868607278368976
   FileSizes: []
   Exists: 1
