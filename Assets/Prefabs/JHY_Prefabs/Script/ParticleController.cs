@@ -1,15 +1,15 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 [RequireComponent(typeof(ParticleSystem))]
-public class EngineParticleController : MonoBehaviour
+public class ParticleController : MonoBehaviour
 {
     public Rigidbody playerRigidbody;
-    [Header("ÆÄÆ¼Å¬ µîÀå ¼Óµµ")]
-    [Tooltip("ÀÌ ¼Óµµ ÀÌ»óÀÌ¸é ÆÄÆ¼Å¬ Ãâ·Â ½ÃÀÛ")]
-    public float speedThreshold = 1f; // ÀÌ ¼Óµµ ÀÌ»óÀÌ¸é ÆÄÆ¼Å¬ Ãâ·Â ½ÃÀÛ
-    [Header("ÃÖ´ë ÆÄÆ¼Å¬ ¾ç")]
-    [Tooltip("ÃÖ´ë ¼ÓµµÀÏ ¶§ ÃÖ´ë ÆÄÆ¼Å¬ Ãâ·Â")]
-    public float maxSpeed = 10f;      // ÃÖ´ë ¼ÓµµÀÏ ¶§ ÃÖ´ë ÆÄÆ¼Å¬ Ãâ·Â
+    [Header("íŒŒí‹°í´ ë“±ì¥ ì†ë„")]
+    [Tooltip("ì´ ì†ë„ ì´ìƒì´ë©´ íŒŒí‹°í´ ì¶œë ¥ ì‹œì‘")]
+    public float speedThreshold = 1f; // ì´ ì†ë„ ì´ìƒì´ë©´ íŒŒí‹°í´ ì¶œë ¥ ì‹œì‘
+    [Header("ìµœëŒ€ íŒŒí‹°í´ ì–‘")]
+    [Tooltip("ìµœëŒ€ ì†ë„ì¼ ë•Œ ìµœëŒ€ íŒŒí‹°í´ ì¶œë ¥")]
+    public float maxSpeed = 10f;      // ìµœëŒ€ ì†ë„ì¼ ë•Œ ìµœëŒ€ íŒŒí‹°í´ ì¶œë ¥
     public float maxEmissionRate = 50f;
 
     private ParticleSystem ps;
@@ -23,11 +23,11 @@ public class EngineParticleController : MonoBehaviour
             if (playerObject != null)
             {
                 playerRigidbody = playerObject.GetComponent<Rigidbody>();
-                Debug.Log("RuneSequenceManager:'Player'ÅÂ±×·Î Ã£À½" + playerRigidbody.name);
+                Debug.Log("RuneSequenceManager:'Player'íƒœê·¸ë¡œ ì°¾ìŒ" + playerRigidbody.name);
             }
             else
             {
-                Debug.LogError("RuneSequenceManager:'Player'ÅÂ±×·Î ¸ø Ã£À½", this);
+                Debug.LogError("RuneSequenceManager:'Player'íƒœê·¸ë¡œ ëª» ì°¾ìŒ", this);
                 enabled = false;
                 return;
             }
