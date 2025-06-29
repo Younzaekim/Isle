@@ -124,7 +124,7 @@ MonoBehaviour:
   Path: Assets/Resources/CNW_Resources/FMOD/Bank/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638868511318977616
+  lastModified: 638868545105867586
   FileSizes: []
   Exists: 1
 --- !u!114 &-4472082976019605641
@@ -149,7 +149,7 @@ MonoBehaviour:
   - {fileID: -5145772718758297144}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -176,7 +176,7 @@ MonoBehaviour:
   - {fileID: -5145772718758297144}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -210,6 +210,33 @@ MonoBehaviour:
   - Water
   - Wood
   Exists: 1
+--- !u!114 &-2488347930760497702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Animals/Rabbit
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Animals/Rabbit
+  Guid:
+    Data1: 1236705744
+    Data2: 1089258164
+    Data3: -56296051
+    Data4: 1771340984
+  Banks:
+  - {fileID: -5145772718758297144}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5040
 --- !u!114 &-2447943041289146886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,7 +286,7 @@ MonoBehaviour:
   - {fileID: -5145772718758297144}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -313,7 +340,7 @@ MonoBehaviour:
   - {fileID: -5145772718758297144}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -352,13 +379,15 @@ MonoBehaviour:
   - {fileID: -2280341957700900558}
   - {fileID: -4472082976019605641}
   - {fileID: 3797191701812273670}
+  - {fileID: 3446702410580563304}
+  - {fileID: -2488347930760497702}
   EditorParameters: []
   MasterBanks:
   - {fileID: 507899739898414951}
   StringsBanks:
   - {fileID: 5892233939858152429}
   cacheVersion: 131847
-  cacheTime: 638868511318977616
+  cacheTime: 638868545105867586
   SerializableEventsDict:
   - key: event:/SFX/Player/Glide
     index: 0
@@ -392,6 +421,10 @@ MonoBehaviour:
     index: 14
   - key: event:/SFX/Animals/AnimalInteract
     index: 15
+  - key: event:/SFX/Animals/Frog
+    index: 16
+  - key: event:/SFX/Animals/Rabbit
+    index: 17
 --- !u!114 &261309872196119742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,7 +496,7 @@ MonoBehaviour:
   Path: Assets/Resources/CNW_Resources/FMOD/Bank/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638868511310092916
+  lastModified: 638868545105435696
   FileSizes: []
   Exists: 1
 --- !u!114 &3232256730907147982
@@ -494,6 +527,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 843
+--- !u!114 &3446702410580563304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Animals/Frog
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Animals/Frog
+  Guid:
+    Data1: 862300264
+    Data2: 1280508719
+    Data3: -1921180017
+    Data4: -2047272687
+  Banks:
+  - {fileID: -5145772718758297144}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2280
 --- !u!114 &3555741998141661169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -565,10 +625,10 @@ MonoBehaviour:
   Path: Assets/Resources/CNW_Resources/FMOD/Bank/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638868511310098396
+  lastModified: 638868545105439429
   FileSizes:
   - Name: 
-    Value: 1640
+    Value: 1724
   Exists: 1
 --- !u!114 &6522969089590674146
 MonoBehaviour:
@@ -696,6 +756,6 @@ MonoBehaviour:
   Path: Assets/Resources/CNW_Resources/FMOD/Bank/BGM.bank
   Name: BGM
   StudioPath: bank:/BGM
-  lastModified: 638868501160480981
+  lastModified: 638868545105404501
   FileSizes: []
   Exists: 1
