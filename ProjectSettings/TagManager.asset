@@ -14,7 +14,6 @@ TagManager:
   - Zone2
   - Zone3
   - Animal
-  - CutScene
   layers:
   - Default
   - TransparentFX
@@ -23,8 +22,8 @@ TagManager:
   - Water
   - UI
   - Ground
-  - Plane
-  - 
+  - Environment
+  - Animal
   - 
   - 
   - 

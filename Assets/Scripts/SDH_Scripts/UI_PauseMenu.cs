@@ -17,7 +17,7 @@ public class UI_PauseMenu : MonoBehaviour
     [Header("InGame UI")]
     [SerializeField] private GameObject flyingGauge; // 게임 중 표시되는 UI (예: 게이지 등)
 
-    void Update()
+    private void Update()
     {
         // Tab 키를 눌렀을 때 일시정지 토글 처리
         if (Input.GetKeyDown(KeyCode.Tab))

@@ -12,10 +12,10 @@ public class AnimalFrog : Animal
 
     private float nextMoveTime;
     private bool isReached;
-    private bool isDetected;
+   
     private int targetIndex = -1;
 
-    void Start()
+    protected override void Start()
     {
         base.Start();
         nextMoveTime = Time.time + moveInterval;
@@ -56,6 +56,10 @@ public class AnimalFrog : Animal
             float offset = 1.5f;
             Vector3 playerBack = player.transform.position - player.transform.forward * offset;
             agent.SetDestination(playerBack);
+
+            Vector3 lookDir = (player.transform.position - transform.position).normalized;
+
+            transform.rotation = Quaternion.LookRotation(lookDir) * Quaternion.Euler(0, -90, 0);
         }
     }
 
@@ -86,6 +90,9 @@ public class AnimalFrog : Animal
             transform.rotation = Quaternion.LookRotation(direction);
 
             agent.SetDestination(targets[targetIndex].position);
+
+            Vector3 lookDir = (targets[targetIndex].position - transform.position).normalized;
+            transform.rotation = Quaternion.LookRotation(lookDir) * Quaternion.Euler(0, -90, 0);
         }
     }
     
