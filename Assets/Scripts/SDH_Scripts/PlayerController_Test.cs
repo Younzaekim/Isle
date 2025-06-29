@@ -10,6 +10,10 @@ public class PlayerController_Test : MonoBehaviour
     [SerializeField] public float flyingTime = 1.5f;
     [SerializeField] private Transform camTarget;
 
+    [Header("동물 상호작용 설정")]
+    [SerializeField] private float interactDistance = 2f;
+    [SerializeField] private LayerMask whatIsAnimal;
+
     [SerializeField] private Transform groundCheck; // 바닥 체크 지점
     [SerializeField] private float groundDistance = 0.5f; // 구체 반지름
     [SerializeField] private LayerMask groundMask; // Ground 레이어
@@ -37,6 +41,11 @@ public class PlayerController_Test : MonoBehaviour
         Jump();
         FlyHandler();
         SuperFlyToggle();
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            InteractWithAnimal();
+        }
     }
 
     private void SuperFlyToggle()
@@ -214,6 +223,23 @@ public class PlayerController_Test : MonoBehaviour
         {
             Gizmos.color = Color.green;
             Gizmos.DrawWireSphere(groundCheck.position, groundDistance);
+        }
+    }
+
+    private void InteractWithAnimal()
+    {
+        Vector3 sphereCenter = transform.position + transform.forward * interactDistance;
+        float sphereRadius = interactDistance;
+
+        RaycastHit[] hits = Physics.SphereCastAll(transform.position, sphereRadius, transform.forward, interactDistance, whatIsAnimal);
+        foreach (var hit in hits)
+        {
+            Animal animal = hit.collider.GetComponent<Animal>();
+            if (animal != null)
+            {
+                animal.Interact();
+                break;
+            }
         }
     }
 }
