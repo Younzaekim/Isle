@@ -10,6 +10,10 @@ public class PlayerController_Update : MonoBehaviour
     [SerializeField] private float mouseSensitivity = 3f; // 마우스 감도 (사용하지 않음)
     [SerializeField] private float fallSpeed = 3f;        // 낙하 속도
 
+    [Header("동물 상호작용 설정")]
+    [SerializeField] private float interactDistance = 2f;
+    [SerializeField] private LayerMask whatIsAnimal;
+
     [Header("Flying")]
     [SerializeField] public float flyingTime = 3f;     // 기본 비행 가능 시간
     [SerializeField] private float forwardLift = 180f; // 비행 시 전방 추진력
@@ -233,6 +237,23 @@ public class PlayerController_Update : MonoBehaviour
         {
             Gizmos.color = Color.green;
             Gizmos.DrawWireSphere(groundCheck.position, groundDistance);
+        }
+    }
+
+    private void InteractWithAnimal()
+    {
+        Vector3 sphereCenter = transform.position + transform.forward * interactDistance;
+        float sphereRadius = interactDistance;
+
+        RaycastHit[] hits = Physics.SphereCastAll(transform.position, sphereRadius, transform.forward, interactDistance, whatIsAnimal);
+        foreach (var hit in hits)
+        {
+            Animal animal = hit.collider.GetComponent<Animal>();
+            if (animal != null)
+            {
+                animal.Interact();
+                break;
+            }
         }
     }
 }

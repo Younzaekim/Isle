@@ -62833,6 +62833,7 @@ MonoBehaviour:
   fallSpeed: 0.5
   flyingTime: 7
   camTarget: {fileID: 0}
+  interactDistance: 2
 --- !u!136 &2137527390
 CapsuleCollider:
   m_ObjectHideFlags: 0
