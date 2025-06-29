@@ -44,17 +44,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 436688768154407268}
     m_Modifications:
+    - target: {fileID: 309118081632533815, guid: a945adcb51d5b494e8c885b03fcc1d05, type: 3}
+      propertyPath: detectRange
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 924464579981733395, guid: a945adcb51d5b494e8c885b03fcc1d05, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 51.94
+      value: 51.719
       objectReference: {fileID: 0}
     - target: {fileID: 924464579981733395, guid: a945adcb51d5b494e8c885b03fcc1d05, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2320013
+      value: -0.016
       objectReference: {fileID: 0}
     - target: {fileID: 924464579981733395, guid: a945adcb51d5b494e8c885b03fcc1d05, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 51.18
+      value: 51.549
       objectReference: {fileID: 0}
     - target: {fileID: 924464579981733395, guid: a945adcb51d5b494e8c885b03fcc1d05, type: 3}
       propertyPath: m_LocalRotation.w
@@ -88,6 +92,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Frog_Repaired (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3028699511159671659, guid: a945adcb51d5b494e8c885b03fcc1d05, type: 3}
+      propertyPath: m_TagString
+      value: Animal
+      objectReference: {fileID: 0}
+    - target: {fileID: 6597328454009174607, guid: a945adcb51d5b494e8c885b03fcc1d05, type: 3}
+      propertyPath: m_TagString
+      value: Animal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -106,9 +118,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 436688768154407268}
     m_Modifications:
+    - target: {fileID: 163474368742772834, guid: 81249a97bd60bc34d9cba434d914fd17, type: 3}
+      propertyPath: m_TagString
+      value: Animal
+      objectReference: {fileID: 0}
     - target: {fileID: 4139389389341237789, guid: 81249a97bd60bc34d9cba434d914fd17, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -197.43259
+      value: -196.156
       objectReference: {fileID: 0}
     - target: {fileID: 4139389389341237789, guid: 81249a97bd60bc34d9cba434d914fd17, type: 3}
       propertyPath: m_LocalPosition.y
@@ -150,6 +166,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Frog_Repaired
       objectReference: {fileID: 0}
+    - target: {fileID: 4457629661749679308, guid: 81249a97bd60bc34d9cba434d914fd17, type: 3}
+      propertyPath: m_TagString
+      value: Animal
+      objectReference: {fileID: 0}
+    - target: {fileID: 5922204153749632117, guid: 81249a97bd60bc34d9cba434d914fd17, type: 3}
+      propertyPath: isDetected
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5922204153749632117, guid: 81249a97bd60bc34d9cba434d914fd17, type: 3}
+      propertyPath: detectRange
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -170,7 +198,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4977532561043215356, guid: 9e61ea120b48d8c4aab60f3b65720182, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -98.93
+      value: -98.79
       objectReference: {fileID: 0}
     - target: {fileID: 4977532561043215356, guid: 9e61ea120b48d8c4aab60f3b65720182, type: 3}
       propertyPath: m_LocalPosition.y
@@ -178,7 +206,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4977532561043215356, guid: 9e61ea120b48d8c4aab60f3b65720182, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 103.03
+      value: 104.05
       objectReference: {fileID: 0}
     - target: {fileID: 4977532561043215356, guid: 9e61ea120b48d8c4aab60f3b65720182, type: 3}
       propertyPath: m_LocalRotation.w
@@ -212,6 +240,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Frog_Repaired (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7101614885697578217, guid: 9e61ea120b48d8c4aab60f3b65720182, type: 3}
+      propertyPath: m_TagString
+      value: Animal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7854185239602728070, guid: 9e61ea120b48d8c4aab60f3b65720182, type: 3}
+      propertyPath: m_TagString
+      value: Animal
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156985453229845521, guid: 9e61ea120b48d8c4aab60f3b65720182, type: 3}
+      propertyPath: detectRange
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -233,6 +273,14 @@ PrefabInstance:
     - target: {fileID: 63991350351019537, guid: 59358c3c50b1add4f9d8625f08fc0f17, type: 3}
       propertyPath: m_Name
       value: Rabbit_Repaired (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 63991350351019537, guid: 59358c3c50b1add4f9d8625f08fc0f17, type: 3}
+      propertyPath: m_TagString
+      value: Animal
+      objectReference: {fileID: 0}
+    - target: {fileID: 897002106008064768, guid: 59358c3c50b1add4f9d8625f08fc0f17, type: 3}
+      propertyPath: m_TagString
+      value: Animal
       objectReference: {fileID: 0}
     - target: {fileID: 1278859158803028651, guid: 59358c3c50b1add4f9d8625f08fc0f17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -274,6 +322,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2348407638480398274, guid: 59358c3c50b1add4f9d8625f08fc0f17, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6479488742178553338, guid: 59358c3c50b1add4f9d8625f08fc0f17, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -285,6 +337,14 @@ PrefabInstance:
     - target: {fileID: 6479488742178553338, guid: 59358c3c50b1add4f9d8625f08fc0f17, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041380572487251856, guid: 59358c3c50b1add4f9d8625f08fc0f17, type: 3}
+      propertyPath: detectRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041380572487251856, guid: 59358c3c50b1add4f9d8625f08fc0f17, type: 3}
+      propertyPath: moveInterval
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -307,6 +367,14 @@ PrefabInstance:
     - target: {fileID: 63991350351019537, guid: 59358c3c50b1add4f9d8625f08fc0f17, type: 3}
       propertyPath: m_Name
       value: Rabbit_Repaired (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 63991350351019537, guid: 59358c3c50b1add4f9d8625f08fc0f17, type: 3}
+      propertyPath: m_TagString
+      value: Animal
+      objectReference: {fileID: 0}
+    - target: {fileID: 897002106008064768, guid: 59358c3c50b1add4f9d8625f08fc0f17, type: 3}
+      propertyPath: m_TagString
+      value: Animal
       objectReference: {fileID: 0}
     - target: {fileID: 1278859158803028651, guid: 59358c3c50b1add4f9d8625f08fc0f17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -359,6 +427,14 @@ PrefabInstance:
     - target: {fileID: 6479488742178553338, guid: 59358c3c50b1add4f9d8625f08fc0f17, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041380572487251856, guid: 59358c3c50b1add4f9d8625f08fc0f17, type: 3}
+      propertyPath: detectRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041380572487251856, guid: 59358c3c50b1add4f9d8625f08fc0f17, type: 3}
+      propertyPath: moveInterval
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
