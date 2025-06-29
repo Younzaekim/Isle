@@ -8,7 +8,7 @@ public class Animal : MonoBehaviour
     protected Animator anim;
     protected GameObject player;
 
-    protected bool isInteracted = false;
+    public bool isInteracted = false;
 
     protected void Start()
     {

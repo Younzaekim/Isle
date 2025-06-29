@@ -70,7 +70,7 @@ MonoBehaviour:
   Path: Assets/Resources/CNW_Resources/FMOD/Bank/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638865562033481546
+  lastModified: 638865562030000000
   FileSizes: []
   Exists: 1
 --- !u!114 &-2814048293048559009
@@ -131,7 +131,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 5892233939858152429}
   cacheVersion: 131847
-  cacheTime: 638865562033481546
+  cacheTime: 638865562030000000
   SerializableEventsDict:
   - key: event:/SFX/Player/Glide
     index: 0
@@ -187,7 +187,7 @@ MonoBehaviour:
   Path: Assets/Resources/CNW_Resources/FMOD/Bank/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638865562033041592
+  lastModified: 638863754250000000
   FileSizes: []
   Exists: 1
 --- !u!114 &3232256730907147982
@@ -262,7 +262,7 @@ MonoBehaviour:
   Path: Assets/Resources/CNW_Resources/FMOD/Bank/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638865562033046271
+  lastModified: 638865562030000000
   FileSizes:
   - Name: 
     Value: 1084
@@ -366,6 +366,6 @@ MonoBehaviour:
   Path: Assets/Resources/CNW_Resources/FMOD/Bank/BGM.bank
   Name: BGM
   StudioPath: bank:/BGM
-  lastModified: 638865562033017173
+  lastModified: 638865562030000000
   FileSizes: []
   Exists: 1
