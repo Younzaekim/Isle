@@ -61,15 +61,15 @@ public class PlayerRadarPulseTrigger : MonoBehaviour
 
         [Header("오버라이드 펄스 속성 (선택 사항, -1 이하면 플레이어 값 그대로 사용)")]
         [Tooltip("이 태그에 연쇄되는 펄스의 최종 크기")]
-        [SerializeField] public float overrideFinalScale = -1f;
+        public float overrideFinalScale = -1f;
         [Tooltip("이 태그에 연쇄되는 펄스의 페이드 인 시간")]
-        [SerializeField] public float overrideFadeInDuration = -1f;
+        public float overrideFadeInDuration = -1f;
         [Tooltip("이 태그에 연쇄되는 펄스의 유지 시간")]
-        [SerializeField] public float overrideHoldDuration = -1f;
+        public float overrideHoldDuration = -1f;
         [Tooltip("이 태그에 연쇄되는 펄스의 페이드 아웃 시간")]
-        [SerializeField] public float overrideFadeOutDuration = -1f;
+        public float overrideFadeOutDuration = -1f;
         [Tooltip("이 태그에 연쇄되는 펄스의 색상 (선택 사항, 알파값 0이면 플레이어 값 그대로 사용) 색 변경시 알파값 숫자 확인!!")]
-        [SerializeField] public Color overridePulseColor = new Color(0, 0, 0, 0);
+        public Color overridePulseColor = new Color(0, 0, 0, 0);
 
         [Header("연쇄 펄스 이벤트")]
         [Tooltip("이 태그를 가진 오브젝트에 연쇄 펄스가 발생했을 때 실행될 이벤트->여기에 사운드 재생 스크립트 넣기")]
