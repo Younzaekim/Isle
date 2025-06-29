@@ -1,0 +1,1 @@
+RaderPulseSphere(ChildOfPlayer) 프리팹을 플레이어 자식 객체로 추가
