@@ -175,26 +175,18 @@ public class PlayerController_Update : MonoBehaviour
     {
         if (isAirborne)
         {
-            //flyingTimer += Time.deltaTime;
-
-            if (flyingTimer >= flyingTime)
-            {
-                StopFly();
-                return;
-            }
-
-            float t = flyingTimer / flyingTime;
+            float t = Mathf.Clamp01(flyingTimer / flyingTime);
             float currentForwardForce = Mathf.Lerp(forwardLift, minFlyForce, t);
-            float currentUpwardForce = Mathf.Lerp(upwardLift, -fallSpeed, t);
-
-            // AddForce 부분 제거
-            // Vector3 force = transform.forward * currentForwardForce + Vector3.up * currentUpwardForce;
-            // rb.AddForce(force, ForceMode.Acceleration);
-
-            // 속도 직접 세팅으로 변경 (앞 방향 속도 + 위/아래 속도)
             Vector3 targetVelocity = transform.forward * currentForwardForce;
 
-            if (Input.GetKey(KeyCode.Space))
+            bool canFlyUp = flyingTimer < flyingTime;
+
+            if (Input.GetKey(KeyCode.LeftControl))
+            {
+                isFlying = false;
+                targetVelocity.y = -fallSpeed * 3f;
+            }
+            else if (Input.GetKey(KeyCode.Space) && canFlyUp)
             {
                 isFlying = true;
                 flyingTimer += Time.deltaTime;
@@ -207,6 +199,12 @@ public class PlayerController_Update : MonoBehaviour
             }
 
             rb.linearVelocity = targetVelocity;
+
+            // 타이머가 다 되면 플라이 종료 상태만 갱신
+            if (flyingTimer >= flyingTime)
+            {
+                StopFly();
+            }
         }
     }
 
