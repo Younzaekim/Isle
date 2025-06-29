@@ -19,7 +19,8 @@ public class RuneGlowController_CustomShader : MonoBehaviour
         if (playerObj != null)
             player = playerObj.transform;
         else
-            Debug.LogError("ÇÃ·¹ÀÌ¾î ¾øÀ½");
+            Debug.LogError("ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½");
+
 
         meshRenderers = GetComponentsInChildren<MeshRenderer>();
         materials = new Material[meshRenderers.Length];

@@ -3,9 +3,9 @@ using UnityEngine.AI;
 
 public class AnimalFrog : Animal
 {
-    [SerializeField] private float detectRange = 2f;      //°¨Áö ¹Ý°æ
+    [SerializeField] private float detectRange = 2f;      //ï¿½ï¿½ï¿½ï¿½ ï¿½Ý°ï¿½
 
-    [SerializeField] private float moveInterval = 2f;     //ÀÌµ¿ ÇÏ´Â ÅÒ
+    [SerializeField] private float moveInterval = 2f;     //ï¿½Ìµï¿½ ï¿½Ï´ï¿½ ï¿½ï¿½
 
     [SerializeField] private Transform[] targets;
     [SerializeField] private LayerMask whatIsPlayer;
@@ -25,13 +25,13 @@ public class AnimalFrog : Animal
     {       
 
         AnimState();
-        if (isInteracted == false) // »óÈ£ÀÛ¿ëµÇÁö ¾Ê¾ÒÀ»¶§¸¸
+        if (isInteracted == false) // ï¿½ï¿½È£ï¿½Û¿ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         {
             Collider[] hits = Physics.OverlapSphere(transform.position, detectRange, whatIsPlayer);
 
             foreach (var hit in hits)
             {
-                if (hit.gameObject == player)
+                if (hit.gameObject.CompareTag("Player"))
                 {
                     isDetected = true;
                     break;

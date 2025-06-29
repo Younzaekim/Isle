@@ -25,7 +25,7 @@ public class PlayerInteractController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
         {
-            SpawnTemporaryObject();
+            //SpawnTemporaryObject();
             InteractWithAnimal();
         }
     }

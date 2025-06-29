@@ -3,15 +3,15 @@ using UnityEngine.AI;
 
 public class AnimalRabbit : Animal
 {
-    [SerializeField] private float detectRange = 2f;      // °¨Áö ¹Ý°æ
-    [SerializeField] private float escapeDistance = 5f;   // µµ¸Á °Å¸®
-    [SerializeField] private float moveInterval = 3f;     // ÀÌµ¿ÇÏ´Â ÅÒ
+    [SerializeField] private float detectRange = 2f;      // ï¿½ï¿½ï¿½ï¿½ ï¿½Ý°ï¿½
+    [SerializeField] private float escapeDistance = 5f;   // ï¿½ï¿½ï¿½ï¿½ ï¿½Å¸ï¿½
+    [SerializeField] private float moveInterval = 3f;     // ï¿½Ìµï¿½ï¿½Ï´ï¿½ ï¿½ï¿½
     [SerializeField] private LayerMask whatIsPlayer;
 
     private float nextMoveTime;
     private bool isReached;
     private float nextDetectTime;
-    private float detectInterval = 0.2f; // °¨Áö ÁÖ±â(ÃÊ)
+    private float detectInterval = 0.5f; // ï¿½ï¿½ï¿½ï¿½ ï¿½Ö±ï¿½(ï¿½ï¿½)
 
     protected override void Start()
     {
@@ -34,7 +34,8 @@ public class AnimalRabbit : Animal
                 Collider[] hits = Physics.OverlapSphere(transform.position, detectRange, whatIsPlayer);
                 foreach (var hit in hits)
                 {
-                    if (hit.gameObject == player)
+                    Debug.Log("Detecting Player");
+                    if (hit.gameObject.CompareTag("Player"))
                     {
                         isDetected = true;
                         Vector3 runDir = (transform.position - player.transform.position).normalized;
@@ -64,7 +65,7 @@ public class AnimalRabbit : Animal
                 isReached = true;
             }
         }
-        else if (isInteracted == true)// »óÈ£ÀÛ¿ëµÆÀ» ¶§
+        else if (isInteracted == true)// ï¿½ï¿½È£ï¿½Û¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
         {
             isDetected = false;
             float offset = 1.5f;
