@@ -11,15 +11,15 @@ public class UI_MainMenu : MonoBehaviour
 
     [Header("Settings")]
     [SerializeField] private GameObject settingsScreen; // 세팅 화면 오브젝트
-    [SerializeField] Button fullscreenButton; // 전체화면 토글 버튼
-    [SerializeField] TextMeshProUGUI fullscreenButtonText; // 전체화면 버튼 텍스트
-    [SerializeField] Slider volumeSlider; // 볼륨 조절 슬라이더
+    [SerializeField] private Button fullscreenButton; // 전체화면 토글 버튼
+    [SerializeField] private TextMeshProUGUI fullscreenButtonText; // 전체화면 버튼 텍스트
+    [SerializeField] private Slider volumeSlider; // 볼륨 조절 슬라이더
 
     [Header("Loading")]
     [SerializeField] private GameObject loadingScreen; // 로딩 화면 오브젝트
     [SerializeField] private Slider loadingSlider; // 로딩 진행 표시 슬라이더
 
-    void Start()
+    private void Start()
     {
         // 저장된 전체화면 설정 불러오기 (없으면 기본값 true)
         bool isFullscreen = PlayerPrefs.GetInt("Fullscreen", 1) == 1;

@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float flyingTime = 7f;
     [SerializeField] private Transform camTarget;
     [SerializeField] private float interactDistance = 2f;
+    [SerializeField] private LayerMask whatIsAnimal;
 
     private Rigidbody rb;
     private Animator anim;
@@ -150,13 +151,13 @@ public class PlayerController : MonoBehaviour
 
     private void InteractWithAnimal()
     {
-        Vector3 sphereCenter = transform.position + transform.forward * (interactDistance * 0.5f);
+        Vector3 sphereCenter = transform.position + transform.forward * interactDistance;
         float sphereRadius = interactDistance;
 
-        Collider[] hits = Physics.OverlapSphere(sphereCenter, sphereRadius);
+        RaycastHit[] hits = Physics.SphereCastAll(transform.position, sphereRadius,transform.forward,interactDistance, whatIsAnimal);
         foreach (var hit in hits)
         {
-            Animal animal = hit.GetComponent<Animal>();
+            Animal animal = hit.collider.GetComponent<Animal>();
             if (animal != null)
             {
                 animal.Interact();
