@@ -73,4 +73,12 @@ public class PlayerSFX : MonoBehaviour
             flyLoopInstance.set3DAttributes(RuntimeUtils.To3DAttributes(transform.position));
         }
     }
+
+    public void PlayInteractSound()
+    {
+        EventInstance instance = RuntimeManager.CreateInstance(interActionEvent);
+        instance.set3DAttributes(RuntimeUtils.To3DAttributes(transform.position));
+        instance.start();
+        instance.release();
+    }
 }

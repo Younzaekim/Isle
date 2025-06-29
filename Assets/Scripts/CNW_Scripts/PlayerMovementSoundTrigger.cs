@@ -21,6 +21,7 @@ public class PlayerMovementSoundTrigger : MonoBehaviour
     {
         HandleJumpLandSound();
         HandleFlyLoopSound();
+        InteractSound();
     }
 
     public void AnimationEvent_Footstep()
@@ -62,5 +63,11 @@ public class PlayerMovementSoundTrigger : MonoBehaviour
 
         // 위치 갱신
         playerSFX.UpdateFlyLoopPosition();
+    }
+
+    private void InteractSound()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftShift) || (Input.GetKeyDown(KeyCode.RightShift)))
+            playerSFX.PlayInteractSound();
     }
 }
