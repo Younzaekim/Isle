@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3174148563665321242}
   - component: {fileID: 240875476963583488}
   - component: {fileID: 2123558285978416410}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granited
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,9 +121,9 @@ GameObject:
   - component: {fileID: 1165649635146915631}
   - component: {fileID: 7067112548039186592}
   - component: {fileID: 3206939313562673992}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cloud
-  m_TagString: Ground
+  m_TagString: Sand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -230,9 +230,9 @@ GameObject:
   - component: {fileID: 6666518810588623722}
   - component: {fileID: 9064580135446677526}
   - component: {fileID: 2195979288851958849}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rock_Mossy
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -245,13 +245,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 251916881341747881}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.0535059, z: -0, w: 0.9985676}
-  m_LocalPosition: {x: -462.17792, y: 173.22, z: 940.9988}
+  m_LocalRotation: {x: -0, y: -0.09117943, z: -0, w: 0.99583447}
+  m_LocalPosition: {x: -471.63058, y: 178.33719, z: 943.6863}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5306179377382442205}
-  m_LocalEulerAnglesHint: {x: 0, y: 6.134, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -10.463, z: 0}
 --- !u!33 &6666518810588623722
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -340,9 +340,9 @@ GameObject:
   - component: {fileID: 2721606653772947643}
   - component: {fileID: 8251970793662849672}
   - component: {fileID: 4671057790760497878}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granited
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -437,116 +437,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1277578450545056532, guid: cdb15ba2e13f53845b9edee6036605dd, type: 3}
---- !u!1 &312201815210818595
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5052779235216651075}
-  - component: {fileID: 4483890702403086166}
-  - component: {fileID: 7951023988894291027}
-  - component: {fileID: 8915421489742195629}
-  m_Layer: 0
-  m_Name: Rock_Mossy
-  m_TagString: Ground
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5052779235216651075
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 312201815210818595}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.74936473, z: -0, w: 0.6621575}
-  m_LocalPosition: {x: -529.3905, y: 34.032814, z: 758.24225}
-  m_LocalScale: {x: 10, y: 7.5, z: 6.250001}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 5306179377382442205}
-  m_LocalEulerAnglesHint: {x: 0, y: -97.071, z: 0}
---- !u!33 &4483890702403086166
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 312201815210818595}
-  m_Mesh: {fileID: -8735020951652625926, guid: b62e480eb4c41a746a49f49408e26dee, type: 3}
---- !u!23 &7951023988894291027
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 312201815210818595}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: b3f5a55a7da383e44a1126fc6501eeec, type: 2}
-  - {fileID: 2100000, guid: 694fd82ab5554eb48826e7901e3ad337, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8915421489742195629
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 312201815210818595}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -8735020951652625926, guid: b62e480eb4c41a746a49f49408e26dee, type: 3}
 --- !u!1 &316064625139408152
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,9 +449,9 @@ GameObject:
   - component: {fileID: 6473771087852636734}
   - component: {fileID: 4577982136676126781}
   - component: {fileID: 7366498473555300054}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granite
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -668,9 +558,9 @@ GameObject:
   - component: {fileID: 8016798391954158484}
   - component: {fileID: 3510981699698154841}
   - component: {fileID: 1972494413715435739}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Dust
-  m_TagString: Ground
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -777,9 +667,9 @@ GameObject:
   - component: {fileID: 679122833434413663}
   - component: {fileID: 494676375608740465}
   - component: {fileID: 196792209663275650}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granite
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -886,9 +776,9 @@ GameObject:
   - component: {fileID: 2065819795230351086}
   - component: {fileID: 253106157875837789}
   - component: {fileID: 6983853379865696504}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Dust
-  m_TagString: Ground
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -995,9 +885,9 @@ GameObject:
   - component: {fileID: 3233097935831507226}
   - component: {fileID: 5600516785302952569}
   - component: {fileID: 3761490398562671099}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cloud
-  m_TagString: Ground
+  m_TagString: Sand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1138,9 +1028,9 @@ GameObject:
   - component: {fileID: 5545911911181692256}
   - component: {fileID: 5962927479046353281}
   - component: {fileID: 8480696121685783371}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granited
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1247,9 +1137,9 @@ GameObject:
   - component: {fileID: 1050459513114619223}
   - component: {fileID: 8527397354282068754}
   - component: {fileID: 2436147537482441980}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granited
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1357,9 +1247,9 @@ GameObject:
   - component: {fileID: 3931446768887376282}
   - component: {fileID: 2771273216397450837}
   - component: {fileID: 8853850161183320183}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rock_Granite
-  m_TagString: Ground
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1373,7 +1263,7 @@ Transform:
   m_GameObject: {fileID: 1463607608966128254}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -500.0405, y: 87.54001, z: 875.38226}
+  m_LocalPosition: {x: -543.1, y: 113, z: 888.9}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1488,9 +1378,9 @@ GameObject:
   - component: {fileID: 1828117190359129960}
   - component: {fileID: 473252769923236052}
   - component: {fileID: 7437728609027789331}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Dust
-  m_TagString: Ground
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1597,9 +1487,9 @@ GameObject:
   - component: {fileID: 4936658763279759669}
   - component: {fileID: 4055712944447760880}
   - component: {fileID: 348614408009782539}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cloud
-  m_TagString: Ground
+  m_TagString: Sand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1706,9 +1596,9 @@ GameObject:
   - component: {fileID: 8099028537657210421}
   - component: {fileID: 4614089680982208775}
   - component: {fileID: 1168964223441243240}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Dust
-  m_TagString: Ground
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1815,9 +1705,9 @@ GameObject:
   - component: {fileID: 3934713573619027291}
   - component: {fileID: 4540445560502613818}
   - component: {fileID: 3671541619642039862}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granite
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1924,9 +1814,9 @@ GameObject:
   - component: {fileID: 758673814440824589}
   - component: {fileID: 3611419223049967464}
   - component: {fileID: 328905694685592772}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granited
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1977,7 +1867,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73ac82d59a7a2c349a18f2d9ab7420ab, type: 2}
+  - {fileID: 2100000, guid: 150d62cd1df3d2a4586974e10cea58b5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2033,9 +1923,9 @@ GameObject:
   - component: {fileID: 8081128390209444635}
   - component: {fileID: 8516167994385259071}
   - component: {fileID: 5180080858075470140}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Dust
-  m_TagString: Ground
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2142,9 +2032,9 @@ GameObject:
   - component: {fileID: 4009761751858383085}
   - component: {fileID: 209659594839631917}
   - component: {fileID: 8168906819981543262}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granite
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2251,9 +2141,9 @@ GameObject:
   - component: {fileID: 20965299590328418}
   - component: {fileID: 6323320246380202081}
   - component: {fileID: 3296732502856994436}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granite
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2360,9 +2250,9 @@ GameObject:
   - component: {fileID: 7885189017432219340}
   - component: {fileID: 4797896197348745096}
   - component: {fileID: 6037186275188534757}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granited
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2469,9 +2359,9 @@ GameObject:
   - component: {fileID: 5780326217862779054}
   - component: {fileID: 421156595480352698}
   - component: {fileID: 6517542600562450038}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granited
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2578,9 +2468,9 @@ GameObject:
   - component: {fileID: 4373775730193280496}
   - component: {fileID: 6184720599234553102}
   - component: {fileID: 6511135013126971098}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granite
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2687,9 +2577,9 @@ GameObject:
   - component: {fileID: 4910125881328107730}
   - component: {fileID: 3152734828596668047}
   - component: {fileID: 1110182713671691620}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Dust
-  m_TagString: Ground
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2796,9 +2686,9 @@ GameObject:
   - component: {fileID: 416320148865237982}
   - component: {fileID: 7444748521556575121}
   - component: {fileID: 2342733917901904491}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granite
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2905,9 +2795,9 @@ GameObject:
   - component: {fileID: 7685683058488131409}
   - component: {fileID: 326643206428866185}
   - component: {fileID: 6716943211495770627}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Dust
-  m_TagString: Ground
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3014,9 +2904,9 @@ GameObject:
   - component: {fileID: 5611818854296710681}
   - component: {fileID: 944773355493492382}
   - component: {fileID: 3722263318682682254}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cloud
-  m_TagString: Ground
+  m_TagString: Sand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3123,9 +3013,9 @@ GameObject:
   - component: {fileID: 2913632490235780662}
   - component: {fileID: 5607898907199824983}
   - component: {fileID: 5306840923716334424}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Dust
-  m_TagString: Ground
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3232,9 +3122,9 @@ GameObject:
   - component: {fileID: 7819399133486392221}
   - component: {fileID: 6624714830071189321}
   - component: {fileID: 2656940119716196155}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cloud
-  m_TagString: Ground
+  m_TagString: Sand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3341,9 +3231,9 @@ GameObject:
   - component: {fileID: 7083310468814756509}
   - component: {fileID: 6440171139378453692}
   - component: {fileID: 1937612468461256501}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rock_Mossy
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3357,7 +3247,7 @@ Transform:
   m_GameObject: {fileID: 2932352944851033127}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -591.1505, y: 124.83281, z: 854.8923}
+  m_LocalPosition: {x: -619.8, y: 142.26646, z: 856.4}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3451,9 +3341,9 @@ GameObject:
   - component: {fileID: 5843912211523756882}
   - component: {fileID: 4886010534339217793}
   - component: {fileID: 65246139596719161}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Dust
-  m_TagString: Ground
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3560,9 +3450,9 @@ GameObject:
   - component: {fileID: 4586104302537365220}
   - component: {fileID: 5269806079529772150}
   - component: {fileID: 8813049456184082962}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bridge
-  m_TagString: Ground
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3575,13 +3465,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2988177274792294648}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.042961255, y: -0.106339976, z: 0.16297476, w: 0.9799416}
-  m_LocalPosition: {x: -499.35, y: 69.06, z: 813.18}
+  m_LocalRotation: {x: -0.16645311, y: -0.4160823, z: 0.21186809, w: 0.86849344}
+  m_LocalPosition: {x: -490.07123, y: 80.4, z: 824.86554}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5306179377382442205}
-  m_LocalEulerAnglesHint: {x: -2.839, y: -12.867, z: 19.205}
+  m_LocalEulerAnglesHint: {x: -6.478, y: -52.974, z: 30.649}
 --- !u!33 &4586104302537365220
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3671,9 +3561,9 @@ GameObject:
   - component: {fileID: 5590167806354072197}
   - component: {fileID: 919340042986607903}
   - component: {fileID: 2114927225081375039}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granited
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3780,9 +3670,9 @@ GameObject:
   - component: {fileID: 4948910286168034007}
   - component: {fileID: 5893293078253784221}
   - component: {fileID: 1365290628622207020}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granite
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3889,9 +3779,9 @@ GameObject:
   - component: {fileID: 1245096310810422777}
   - component: {fileID: 5900018860039969452}
   - component: {fileID: 7667244545531514906}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granited
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3998,9 +3888,9 @@ GameObject:
   - component: {fileID: 5698580487210186723}
   - component: {fileID: 6942777917801722885}
   - component: {fileID: 4388881690469090677}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cloud
-  m_TagString: Ground
+  m_TagString: Sand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4124,14 +4014,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5052779235216651075}
   - {fileID: 3566487339831118359}
   - {fileID: 8139346110556567312}
   - {fileID: 6314349317385160203}
   - {fileID: 815372976870336542}
   - {fileID: 5750612881707373521}
   - {fileID: 931688240430766654}
-  - {fileID: 7847506785938131725}
   - {fileID: 9111779249816669712}
   - {fileID: 5717393392238051308}
   - {fileID: 8602209186620660947}
@@ -4142,7 +4030,6 @@ Transform:
   - {fileID: 7892407496932391103}
   - {fileID: 2643290515700091846}
   - {fileID: 9030628259068829153}
-  - {fileID: 3556566968096781438}
   m_Father: {fileID: 1752818499634238506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3672083184782830903
@@ -4157,9 +4044,9 @@ GameObject:
   - component: {fileID: 5300385104196591608}
   - component: {fileID: 8463446147623818838}
   - component: {fileID: 3131131476365119220}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Dust
-  m_TagString: Ground
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4266,9 +4153,9 @@ GameObject:
   - component: {fileID: 1747357826610833541}
   - component: {fileID: 2699963297256787616}
   - component: {fileID: 3542426737417772025}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granite
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4375,9 +4262,9 @@ GameObject:
   - component: {fileID: 5480988178487539092}
   - component: {fileID: 3480625401892831536}
   - component: {fileID: 7770048343135906039}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rock_Mossy
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4390,13 +4277,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3837752413078925387}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.83318263, z: -0, w: 0.55299795}
-  m_LocalPosition: {x: -549.93, y: 49.722816, z: 801.06}
+  m_LocalRotation: {x: 0.010670215, y: -0.9650644, z: 0.103725374, w: 0.24037044}
+  m_LocalPosition: {x: -519.89795, y: 51.19456, z: 788.3068}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5306179377382442205}
-  m_LocalEulerAnglesHint: {x: 0, y: -112.854, z: 0}
+  m_LocalEulerAnglesHint: {x: 11.849, y: -151.85, z: 1.714}
 --- !u!33 &5480988178487539092
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4485,9 +4372,9 @@ GameObject:
   - component: {fileID: 9034859406626055201}
   - component: {fileID: 2913029631978126172}
   - component: {fileID: 6743346102778360306}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rock_Mossy
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4500,13 +4387,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3950568275406671122}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.19944802, y: 0.5327314, z: 0.13085748, w: 0.8119692}
-  m_LocalPosition: {x: -494.18, y: 67.66, z: 814.6}
+  m_LocalRotation: {x: -0.33118585, y: 0.22577724, z: 0.06701285, w: 0.91370124}
+  m_LocalPosition: {x: -486.9, y: 80.1015, z: 829.4}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5306179377382442205}
-  m_LocalEulerAnglesHint: {x: -27.601, y: 786.538, z: 0}
+  m_LocalEulerAnglesHint: {x: -39.455, y: 748.481, z: -2.011}
 --- !u!33 &9034859406626055201
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4595,9 +4482,9 @@ GameObject:
   - component: {fileID: 7143236621034110895}
   - component: {fileID: 5596512659368818738}
   - component: {fileID: 6851468743499719439}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granited
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4704,9 +4591,9 @@ GameObject:
   - component: {fileID: 1404365935230815440}
   - component: {fileID: 2877840731891495796}
   - component: {fileID: 717660355879815336}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rock_Mossy
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4814,9 +4701,9 @@ GameObject:
   - component: {fileID: 8732947189441593449}
   - component: {fileID: 8159128085955682804}
   - component: {fileID: 2072067042927400134}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Dust
-  m_TagString: Ground
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4923,7 +4810,7 @@ GameObject:
   - component: {fileID: 2967958987936363322}
   - component: {fileID: 5321342229346947580}
   - component: {fileID: 8641944876279673079}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cloud
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -5032,9 +4919,9 @@ GameObject:
   - component: {fileID: 9164829921213760579}
   - component: {fileID: 9186735706232009951}
   - component: {fileID: 8121744370803645040}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cloud
-  m_TagString: Ground
+  m_TagString: Sand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5141,9 +5028,9 @@ GameObject:
   - component: {fileID: 7730836515983600174}
   - component: {fileID: 8269980292705916636}
   - component: {fileID: 3335164534471343812}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rock_Mossy
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5157,7 +5044,7 @@ Transform:
   m_GameObject: {fileID: 4393914877117033044}
   serializedVersion: 2
   m_LocalRotation: {x: -0.20366351, y: 0.9444531, z: -0.07249266, w: 0.24753666}
-  m_LocalPosition: {x: -473.18048, y: 78.27281, z: 857.7723}
+  m_LocalPosition: {x: -488.69998, y: 102.4, z: 882.80005}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -5251,9 +5138,9 @@ GameObject:
   - component: {fileID: 1060884067503180176}
   - component: {fileID: 2675199328188945575}
   - component: {fileID: 4200950057309139329}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rock_Mossy
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5267,7 +5154,7 @@ Transform:
   m_GameObject: {fileID: 4540762451817525933}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0035490799, y: -0.32583869, z: 0.054283075, w: 0.94385916}
-  m_LocalPosition: {x: -571.9978, y: 110.36635, z: 799.1502}
+  m_LocalPosition: {x: -600.6473, y: 127.8, z: 800.65796}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -5361,9 +5248,9 @@ GameObject:
   - component: {fileID: 7249666603341155851}
   - component: {fileID: 8314447845947558857}
   - component: {fileID: 2485209259061585717}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cloud
-  m_TagString: Ground
+  m_TagString: Sand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5470,9 +5357,9 @@ GameObject:
   - component: {fileID: 4558692675604873209}
   - component: {fileID: 440867022406777837}
   - component: {fileID: 3822129869003500082}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cloud
-  m_TagString: Ground
+  m_TagString: Sand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5579,9 +5466,9 @@ GameObject:
   - component: {fileID: 4385912920516629987}
   - component: {fileID: 262283596229812432}
   - component: {fileID: 6096235428179490095}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granite
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5688,9 +5575,9 @@ GameObject:
   - component: {fileID: 8663144857292111995}
   - component: {fileID: 1642985836582686143}
   - component: {fileID: 7884793125246933404}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cloud
-  m_TagString: Ground
+  m_TagString: Sand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5798,9 +5685,9 @@ GameObject:
   - component: {fileID: 3347503641916547234}
   - component: {fileID: 5206228122084044406}
   - component: {fileID: 2868345509360536416}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rock_Granite
-  m_TagString: Ground
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5813,13 +5700,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5020173300569561247}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0037150362, y: 0.053376794, z: 0.06933281, w: 0.9961577}
-  m_LocalPosition: {x: -466.01276, y: 163.7709, z: 905.4954}
+  m_LocalRotation: {x: -0.0063307974, y: -0.090959355, z: 0.06914309, w: 0.9934312}
+  m_LocalPosition: {x: -465.1643, y: 168.88809, z: 908.5666}
   m_LocalScale: {x: 4, y: 2.4, z: 2.97}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5306179377382442205}
-  m_LocalEulerAnglesHint: {x: 0, y: 6.134, z: 7.963}
+  m_LocalEulerAnglesHint: {x: 0, y: -10.463, z: 7.963}
 --- !u!33 &7032275229213952002
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5929,9 +5816,9 @@ GameObject:
   - component: {fileID: 1303169680599321468}
   - component: {fileID: 5239251060752145479}
   - component: {fileID: 134686441863749302}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cloud
-  m_TagString: Ground
+  m_TagString: Sand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6038,9 +5925,9 @@ GameObject:
   - component: {fileID: 6235852090081041975}
   - component: {fileID: 6424349610632881443}
   - component: {fileID: 7002933391438469412}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granited
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6147,9 +6034,9 @@ GameObject:
   - component: {fileID: 7257046415154329032}
   - component: {fileID: 2161765679216018326}
   - component: {fileID: 5801870323487996028}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granite
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6256,9 +6143,9 @@ GameObject:
   - component: {fileID: 3575698308906692711}
   - component: {fileID: 3972718449655684658}
   - component: {fileID: 8826734957254345101}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granited
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6365,9 +6252,9 @@ GameObject:
   - component: {fileID: 7849538505333394627}
   - component: {fileID: 6465069985237729109}
   - component: {fileID: 8869163707778531603}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granited
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6474,9 +6361,9 @@ GameObject:
   - component: {fileID: 7359266159651206396}
   - component: {fileID: 6475525654925673477}
   - component: {fileID: 6298058765213424336}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granite
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6583,9 +6470,9 @@ GameObject:
   - component: {fileID: 8574136863171568932}
   - component: {fileID: 4389612714804851041}
   - component: {fileID: 6501896684824296368}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granited
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6692,9 +6579,9 @@ GameObject:
   - component: {fileID: 3359251434057194830}
   - component: {fileID: 8567591028137925878}
   - component: {fileID: 8724669251354475316}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cloud
-  m_TagString: Ground
+  m_TagString: Sand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6801,9 +6688,9 @@ GameObject:
   - component: {fileID: 8826684065668612347}
   - component: {fileID: 8079116680568849618}
   - component: {fileID: 7764165896113983147}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Dust
-  m_TagString: Ground
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6910,9 +6797,9 @@ GameObject:
   - component: {fileID: 6100083320843957799}
   - component: {fileID: 4417354021009192031}
   - component: {fileID: 2297812139560057698}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cloud
-  m_TagString: Ground
+  m_TagString: Sand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7088,9 +6975,9 @@ GameObject:
   - component: {fileID: 722290591483988323}
   - component: {fileID: 5359590206839202070}
   - component: {fileID: 3375203025585499244}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granited
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7198,9 +7085,9 @@ GameObject:
   - component: {fileID: 1217498614410742219}
   - component: {fileID: 5575322667179610471}
   - component: {fileID: 1609519530469875628}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rock_Granite
-  m_TagString: Ground
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7214,7 +7101,7 @@ Transform:
   m_GameObject: {fileID: 5960295651023446049}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -513.19, y: 140.48, z: 859.6}
+  m_LocalPosition: {x: -513.19, y: 162.5, z: 859.6}
   m_LocalScale: {x: 7, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7329,9 +7216,9 @@ GameObject:
   - component: {fileID: 529461293273361354}
   - component: {fileID: 1273834307223429468}
   - component: {fileID: 7450557523677805386}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granite
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7438,9 +7325,9 @@ GameObject:
   - component: {fileID: 7171611495452991342}
   - component: {fileID: 5514688333895910464}
   - component: {fileID: 179672969675477651}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granite
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7547,9 +7434,9 @@ GameObject:
   - component: {fileID: 5615975863444298018}
   - component: {fileID: 7293670169210869706}
   - component: {fileID: 3085727947693323145}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granited
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7656,9 +7543,9 @@ GameObject:
   - component: {fileID: 4183633078654347637}
   - component: {fileID: 5025905285071067795}
   - component: {fileID: 3973560052333798336}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granited
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7753,138 +7640,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1277578450545056532, guid: cdb15ba2e13f53845b9edee6036605dd, type: 3}
---- !u!1 &6449727355907708665
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7847506785938131725}
-  - component: {fileID: 5026684102705430672}
-  - component: {fileID: 4676453859877922352}
-  - component: {fileID: 7054378958842700837}
-  - component: {fileID: 6956102321917920947}
-  m_Layer: 0
-  m_Name: Rock_Granite
-  m_TagString: Ground
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7847506785938131725
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6449727355907708665}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -539.22046, y: 100.29001, z: 814.1423}
-  m_LocalScale: {x: 5, y: 5, z: 5}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 5306179377382442205}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &5026684102705430672
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6449727355907708665}
-  m_Mesh: {fileID: 1270469522279558344, guid: b62e480eb4c41a746a49f49408e26dee, type: 3}
---- !u!23 &4676453859877922352
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6449727355907708665}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 694fd82ab5554eb48826e7901e3ad337, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7054378958842700837
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6449727355907708665}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1270469522279558344, guid: b62e480eb4c41a746a49f49408e26dee, type: 3}
---- !u!64 &6956102321917920947
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6449727355907708665}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1270469522279558344, guid: b62e480eb4c41a746a49f49408e26dee, type: 3}
 --- !u!1 &6706526827717529672
 GameObject:
   m_ObjectHideFlags: 0
@@ -7897,9 +7652,9 @@ GameObject:
   - component: {fileID: 4391470633224687040}
   - component: {fileID: 5681642747784448873}
   - component: {fileID: 5406480054602165402}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granited
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8006,9 +7761,9 @@ GameObject:
   - component: {fileID: 8711364065784483074}
   - component: {fileID: 7273104303251954868}
   - component: {fileID: 1644625028196694458}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cloud
-  m_TagString: Ground
+  m_TagString: Sand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8115,9 +7870,9 @@ GameObject:
   - component: {fileID: 5720228035808863893}
   - component: {fileID: 6416970069190200508}
   - component: {fileID: 6445350127527089407}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granite
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8225,9 +7980,9 @@ GameObject:
   - component: {fileID: 8905797851598820240}
   - component: {fileID: 880302429429977865}
   - component: {fileID: 520232633606721334}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rock_Granite
-  m_TagString: Ground
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8241,7 +7996,7 @@ Transform:
   m_GameObject: {fileID: 6768962157758127333}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -537.6, y: 96.14282, z: 856.5}
+  m_LocalPosition: {x: -568.4, y: 119.6, z: 838.4}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -8356,9 +8111,9 @@ GameObject:
   - component: {fileID: 6307343462022409426}
   - component: {fileID: 6187303722177451145}
   - component: {fileID: 807195306876607122}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Dust
-  m_TagString: Ground
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8465,9 +8220,9 @@ GameObject:
   - component: {fileID: 4933584141936787157}
   - component: {fileID: 7196040534361186743}
   - component: {fileID: 2847185831729015966}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bridge
-  m_TagString: Ground
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8480,13 +8235,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6809997081688167628}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.10553855, y: -0.659873, z: 0.11748895, w: 0.73459214}
-  m_LocalPosition: {x: -465.95, y: 164.51, z: 903.6}
+  m_LocalRotation: {x: -0.12139081, y: -0.75898856, z: 0.101026155, w: 0.63166}
+  m_LocalPosition: {x: -464.56284, y: 169.62718, z: 906.76825}
   m_LocalScale: {x: 2, y: 2, z: 3.1600003}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5306179377382442205}
-  m_LocalEulerAnglesHint: {x: 0, y: -83.866, z: 18.174}
+  m_LocalEulerAnglesHint: {x: 0, y: -100.463, z: 18.174}
 --- !u!33 &4933584141936787157
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8576,9 +8331,9 @@ GameObject:
   - component: {fileID: 7620238851539204247}
   - component: {fileID: 4980122846820887163}
   - component: {fileID: 831870789811076277}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cloud
-  m_TagString: Ground
+  m_TagString: Sand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8685,9 +8440,9 @@ GameObject:
   - component: {fileID: 3783848095514172362}
   - component: {fileID: 9137735301284487869}
   - component: {fileID: 2257618773999223611}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granite
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8794,9 +8549,9 @@ GameObject:
   - component: {fileID: 6473496482480800151}
   - component: {fileID: 8943861368533370140}
   - component: {fileID: 4985267489576768917}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granite
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8903,9 +8658,9 @@ GameObject:
   - component: {fileID: 1768154565422241570}
   - component: {fileID: 6472561066964266936}
   - component: {fileID: 1930005160458901067}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bridge
-  m_TagString: Ground
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8918,13 +8673,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7199907566434677661}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.10090217, y: -0.6605979, z: 0.11232756, w: 0.735399}
-  m_LocalPosition: {x: -462.71, y: 173.96, z: 935.71}
+  m_LocalRotation: {x: -0.116057985, y: -0.7598226, z: 0.09658791, w: 0.6323536}
+  m_LocalPosition: {x: -470.62973, y: 179.0772, z: 938.4659}
   m_LocalScale: {x: 2, y: 2, z: 3.1599998}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5306179377382442205}
-  m_LocalEulerAnglesHint: {x: 0, y: -83.866, z: 17.369}
+  m_LocalEulerAnglesHint: {x: 0, y: -100.463, z: 17.369}
 --- !u!33 &1768154565422241570
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -9002,138 +8757,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 674340280032488212, guid: 17edde830b2c03c4380312f9ef12286e, type: 3}
---- !u!1 &7284238274091939985
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3556566968096781438}
-  - component: {fileID: 3606915400266840530}
-  - component: {fileID: 6182708973902992334}
-  - component: {fileID: 3127456480170483022}
-  - component: {fileID: 8743173183142069416}
-  m_Layer: 0
-  m_Name: Rock_Granite
-  m_TagString: Ground
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3556566968096781438
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7284238274091939985}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.734749, z: -0, w: 0.67833906}
-  m_LocalPosition: {x: -485.98, y: 177.81282, z: 942.32}
-  m_LocalScale: {x: 3, y: 3, z: 3}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 5306179377382442205}
-  m_LocalEulerAnglesHint: {x: 0, y: 94.572, z: 0}
---- !u!33 &3606915400266840530
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7284238274091939985}
-  m_Mesh: {fileID: -1535644303154025464, guid: b62e480eb4c41a746a49f49408e26dee, type: 3}
---- !u!23 &6182708973902992334
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7284238274091939985}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 694fd82ab5554eb48826e7901e3ad337, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3127456480170483022
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7284238274091939985}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1535644303154025464, guid: b62e480eb4c41a746a49f49408e26dee, type: 3}
---- !u!64 &8743173183142069416
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7284238274091939985}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1535644303154025464, guid: b62e480eb4c41a746a49f49408e26dee, type: 3}
 --- !u!1 &7329374856384148570
 GameObject:
   m_ObjectHideFlags: 0
@@ -9146,9 +8769,9 @@ GameObject:
   - component: {fileID: 4175321427729473015}
   - component: {fileID: 7003001929242117346}
   - component: {fileID: 421691772717619399}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Dust
-  m_TagString: Ground
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9255,9 +8878,9 @@ GameObject:
   - component: {fileID: 5984414357559435338}
   - component: {fileID: 7361212851968803069}
   - component: {fileID: 5860749603818187622}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Dust
-  m_TagString: Ground
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9364,9 +8987,9 @@ GameObject:
   - component: {fileID: 3013329942427431724}
   - component: {fileID: 301045478660056306}
   - component: {fileID: 3623872657017960333}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bridge
-  m_TagString: Ground
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9380,7 +9003,7 @@ Transform:
   m_GameObject: {fileID: 7613664340992225055}
   serializedVersion: 2
   m_LocalRotation: {x: -0.14617427, y: -0.82281244, z: 0.088991165, w: 0.5419349}
-  m_LocalPosition: {x: -590.65314, y: 128.40404, z: 847.1206}
+  m_LocalPosition: {x: -619.3026, y: 145.83769, z: 848.62836}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -9475,9 +9098,9 @@ GameObject:
   - component: {fileID: 8508109266951311700}
   - component: {fileID: 1392969362313301457}
   - component: {fileID: 6223512789417798982}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granite
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9584,9 +9207,9 @@ GameObject:
   - component: {fileID: 5289566884954558954}
   - component: {fileID: 638092538320371190}
   - component: {fileID: 7170418712275587535}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granite
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9693,9 +9316,9 @@ GameObject:
   - component: {fileID: 6234161779715354973}
   - component: {fileID: 6861197061662419772}
   - component: {fileID: 7902776676478043061}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granited
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9802,9 +9425,9 @@ GameObject:
   - component: {fileID: 9105660682625336768}
   - component: {fileID: 46380605268107022}
   - component: {fileID: 4451192929853846495}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granite
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9911,9 +9534,9 @@ GameObject:
   - component: {fileID: 8469982113190535444}
   - component: {fileID: 3754141288038838136}
   - component: {fileID: 6365213369989510922}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Dust
-  m_TagString: Ground
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10020,9 +9643,9 @@ GameObject:
   - component: {fileID: 4767183438019581278}
   - component: {fileID: 3746692655590956800}
   - component: {fileID: 1313139753886117914}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rock_Mossy
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10035,13 +9658,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8171875230265247194}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.27443928, z: -0, w: 0.9616045}
-  m_LocalPosition: {x: -471.79028, y: 151.68282, z: 865.9307}
+  m_LocalRotation: {x: -0, y: 0.13277562, z: -0, w: 0.9911462}
+  m_LocalPosition: {x: -459.4, y: 156.8, z: 869}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5306179377382442205}
-  m_LocalEulerAnglesHint: {x: 0, y: 31.857, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 15.26, z: 0}
 --- !u!33 &4767183438019581278
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -10130,9 +9753,9 @@ GameObject:
   - component: {fileID: 1150260308478777326}
   - component: {fileID: 3203192612739189270}
   - component: {fileID: 9144992997718201913}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Dust
-  m_TagString: Ground
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10239,9 +9862,9 @@ GameObject:
   - component: {fileID: 4953425543338510611}
   - component: {fileID: 6154309409108984444}
   - component: {fileID: 4868710734182361774}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granite
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10348,9 +9971,9 @@ GameObject:
   - component: {fileID: 1808432919573550137}
   - component: {fileID: 1360305004311826545}
   - component: {fileID: 7437420764113861124}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cloud
-  m_TagString: Ground
+  m_TagString: Sand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10457,9 +10080,9 @@ GameObject:
   - component: {fileID: 5467125513861433613}
   - component: {fileID: 7525773863054436365}
   - component: {fileID: 3830043151195212732}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granited
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10567,9 +10190,9 @@ GameObject:
   - component: {fileID: 3838405514753852036}
   - component: {fileID: 6814111463322338244}
   - component: {fileID: 8962867255286146210}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rock_Granite
-  m_TagString: Ground
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10583,7 +10206,7 @@ Transform:
   m_GameObject: {fileID: 8544977210431220973}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -549.51, y: 127.740005, z: 862.04}
+  m_LocalPosition: {x: -561.5, y: 156.5, z: 861.4}
   m_LocalScale: {x: 7, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10698,9 +10321,9 @@ GameObject:
   - component: {fileID: 6056899213534384227}
   - component: {fileID: 5671785231282615431}
   - component: {fileID: 4011802065548675687}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Dust
-  m_TagString: Ground
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10882,9 +10505,9 @@ GameObject:
   - component: {fileID: 5057690649305503126}
   - component: {fileID: 3570578303085922057}
   - component: {fileID: 4963845687209489845}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Dust
-  m_TagString: Ground
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10991,9 +10614,9 @@ GameObject:
   - component: {fileID: 2170538394365420372}
   - component: {fileID: 6619246459732435609}
   - component: {fileID: 6705673496355072946}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granited
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11100,9 +10723,9 @@ GameObject:
   - component: {fileID: 1997652292186790579}
   - component: {fileID: 7883813027947058662}
   - component: {fileID: 7906909657515749174}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granited
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11209,9 +10832,9 @@ GameObject:
   - component: {fileID: 1465825406136291558}
   - component: {fileID: 4420927705415725734}
   - component: {fileID: 2000029935272088351}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granited
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11318,9 +10941,9 @@ GameObject:
   - component: {fileID: 1267180312536329507}
   - component: {fileID: 3402120096669638033}
   - component: {fileID: 6625691316335210701}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_Granited
-  m_TagString: Ground
+  m_TagString: Leave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

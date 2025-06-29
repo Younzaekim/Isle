@@ -1,27 +1,30 @@
 using UnityEngine;
 
-class QuestBarrierController : MonoBehaviour
+class MapBlockerController : MonoBehaviour
 {
-    [SerializeField] private Collider quest1Collider;
-    [SerializeField] private Collider quest2Collider;
+    [SerializeField] private Collider forestCollider;
+    [SerializeField] private Collider lakeCollider;
 
-    void Update()
+    [SerializeField] private Animal rabbit;
+    [SerializeField] private Animal frog;
+
+    private void Update()
     {
-        // 퀘스트 1 클리어 (예시: Q 키)
-        if (Input.GetKeyDown(KeyCode.Q))
+        // 토끼 상호작용
+        if (rabbit.isInteracted)
         {
-            DisableBarrier(quest1Collider);
+            DisableBarrier(forestCollider);
         }
 
-        // 퀘스트 2 클리어 (예시: E 키)
-        if (Input.GetKeyDown(KeyCode.E))
+        // 개구리 상호작용
+        if (frog.isInteracted)
         {
-            DisableBarrier(quest2Collider);
+            DisableBarrier(lakeCollider);
         }
     }
 
     // 전달받은 콜라이더를 비활성화
-    void DisableBarrier(Collider collider)
+    private void DisableBarrier(Collider collider)
     {
         if (collider != null)
             collider.enabled = false;

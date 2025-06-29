@@ -11,15 +11,15 @@ public class RespawnController : MonoBehaviour
         public Transform respawnPoint; // 해당 존의 리스폰 위치 (빈 오브젝트)
     }
 
-    public List<ZoneRespawnPoint> respawnPoints = new List<ZoneRespawnPoint>(); // 리스폰 존 정보 리스트
+    [SerializeField] private List<ZoneRespawnPoint> respawnPoints = new List<ZoneRespawnPoint>(); // 리스폰 존 정보 리스트
 
     private Dictionary<string, Transform> respawnDictionary = new Dictionary<string, Transform>(); // 존 태그와 리스폰 위치를 빠르게 찾기 위한 딕셔너리
 
-    public string currentZone = null;   // 현재 플레이어가 밟고 있는 존 태그
+    private string currentZone = null;  // 현재 플레이어가 밟고 있는 존 태그
     private Transform lastRespawnPoint; // 마지막으로 성공적으로 밟은 리스폰 포인트
     private float fallThreshold = -8f;  // 낙사 판정 y 좌표 기준
 
-    void Start()
+    private void Start()
     {
         // 인스펙터에서 설정한 리스트를 딕셔너리로 변환 (빠른 조회용)
         foreach (var point in respawnPoints)
@@ -37,13 +37,13 @@ public class RespawnController : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("리스폰 포인트가 설정 안됨");
+            Debug.LogWarning("리스폰 포인트 설정 안됨");
             lastRespawnPoint = new GameObject("DefaultRespawnPoint").transform;
             lastRespawnPoint.position = transform.position; // 현재 시작 위치를 기본값으로 설정
         }
     }
 
-    void Update()
+    private void Update()
     {
         // y 좌표가 낙사 기준보다 낮으면 리스폰
         if (transform.position.y < fallThreshold)
@@ -52,7 +52,7 @@ public class RespawnController : MonoBehaviour
         }
     }
 
-    void Respawn()
+    private void Respawn()
     {
         // currentZone이 유효하면 해당 존 리스폰 포인트로 이동
         if (!string.IsNullOrEmpty(currentZone) && respawnDictionary.ContainsKey(currentZone))
@@ -67,7 +67,7 @@ public class RespawnController : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         // 충돌된 오브젝트의 부모가 있으면 부모의 태그 확인
         if (collision.gameObject.transform.parent != null)
