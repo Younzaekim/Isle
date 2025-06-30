@@ -13,14 +13,15 @@ public class CutSceneController : MonoBehaviour
     }
 
 
-    private void OTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("CutSceneTrigger"))
         {
+            Debug.Log("Cutscene Triggered");
             // Check if the playableDirector is not null
             other.gameObject.SetActive(false);
             playableDirector.Play(timelineAsset);
-            
+
         }
     }
     // Update is called once per frame
