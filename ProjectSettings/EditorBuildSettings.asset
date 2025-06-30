@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/SDH_Scenes/MainMenu.unity
     guid: 23ba5d64ce6e2404eabd76ce5d8237db
   - enabled: 1
-    path: Assets/Scenes/SDH_Scenes/LevelDesign_Stage.unity
-    guid: 08bae571158a66d41b9911db4fa2568a
+    path: Assets/Scenes/Map_Final.unity
+    guid: e9c3b7626d4463b42b4e2dd9a180588f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
